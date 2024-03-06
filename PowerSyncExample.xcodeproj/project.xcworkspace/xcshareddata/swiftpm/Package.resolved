@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "powersync-kotlin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/powersync-ja/powersync-kotlin.git",
+      "state" : {
+        "revision" : "7d81750617ecc7ad308d1019d2af6ed93e586ff5",
+        "version" : "0.0.1-ALPHA2.0"
+      }
+    }
+  ],
+  "version" : 2
+}
