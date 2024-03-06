@@ -3,7 +3,7 @@ import powersyncswift
 
 class DummyConnector: PowerSyncBackendConnector {
     func fetchCredentials() -> PowerSyncCredentials {
-        return PowerSyncCredentials(endpoint: "", token: "", userId: nil, expiresAt: nil)
+        return PowerSyncCredentials(endpoint: "", token: "", userId: "", expiresAt: nil)
     }
     
     func uploadData(database:PowerSyncDatabase) {}
@@ -18,7 +18,7 @@ class PowerSync {
         Table(name: "test", columns: [
             Column(name: "name", type: ColumnType.text)
         ], indexes: [], localOnly: false, insertOnly: false, _viewNameOverride: "test")
-     ]
+    ]
     )
     var db: PowerSyncDatabase!
     
@@ -26,11 +26,11 @@ class PowerSync {
         db = PowerSyncBuilderCompanion().from(factory: factory, schema: schema).build()
         
         // TODO: Implement connector.
-//        do {
-//            try await db.connect(connector: connector)
-//        } catch {
-//            print("Unexpected error: \(error)") // Catches any other error
-//        }
+        //                do {
+        //                    try await db.connect(connector: connector)
+        //                } catch {
+        //                    print("Unexpected error: \(error)") // Catches any other error
+        //                }
     }
     
     func version() async -> String  {
@@ -39,7 +39,6 @@ class PowerSync {
         } catch {
             return error.localizedDescription
         }
-       
     }
     
     func firstUser()async -> String {
@@ -49,24 +48,18 @@ class PowerSync {
             } as! String?
             return result != nil ? result! : "No Users"
         }catch {
-            print("Unexpected error: \(error)") // Catches any other error
+            print("Error on querying firstUser: \(error)")
         }
         return "Error"
     }
     
     func createUser()async -> Void {
-        let _ = await self.writeTransaction {
-                return try await self.db.execute(sql: "INSERT OR REPLACE INTO test (id, name) VALUES (?, ?)", parameters:["1", "Test User"])
-        }
-       
-    }
-    
-    func writeTransaction(_ handle: @escaping SuspendHandle) async -> Any? {
         do {
-            return try await self.db.writeTransaction(body: SuspendWrapper(handle) )
+            let _ = try await self.db.writeTransaction(body: SuspendWrapper{
+                try await self.db.execute(sql: "INSERT OR REPLACE INTO test (id, name) VALUES (?, ?)", parameters:["1", "Test User"])
+            })
         }catch {
-            print("Unexpected error: \(error)")
-            return nil
+            print("Error on createUser: \(error)")
         }
     }
 }
