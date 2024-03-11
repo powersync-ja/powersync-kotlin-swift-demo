@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A4AD3852B9EE763005CBFD4 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD3842B9EE763005CBFD4 /* AuthController.swift */; };
+		6A4AD3872B9EEA80005CBFD4 /* ActionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD3862B9EEA80005CBFD4 /* ActionState.swift */; };
+		6A4AD3892B9EEB21005CBFD4 /* _Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD3882B9EEB21005CBFD4 /* _Secrets.swift */; };
+		6A4AD38C2B9EEF55005CBFD4 /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = 6A4AD38B2B9EEF55005CBFD4 /* CasePaths */; };
+		6A4AD3902B9EF775005CBFD4 /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD38F2B9EF775005CBFD4 /* ErrorText.swift */; };
 		6A7315882B9854220004CB17 /* PowerSyncExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7315872B9854220004CB17 /* PowerSyncExampleApp.swift */; };
 		6A73158A2B9854220004CB17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7315892B9854220004CB17 /* ContentView.swift */; };
 		6A73158C2B9854240004CB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A73158B2B9854240004CB17 /* Assets.xcassets */; };
@@ -15,6 +20,11 @@
 		6A7315B72B9857AD0004CB17 /* powersync-sqlite-core.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7315B62B9857AD0004CB17 /* powersync-sqlite-core.xcframework */; };
 		6A7315B82B9857AD0004CB17 /* powersync-sqlite-core.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7315B62B9857AD0004CB17 /* powersync-sqlite-core.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A7315BB2B98BDD30004CB17 /* PowerSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7315BA2B98BDD30004CB17 /* PowerSync.swift */; };
+		6A9668FB2B9EDD4B00B05DCF /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9668FA2B9EDD4B00B05DCF /* Supabase.swift */; };
+		6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9668FD2B9EE4FE00B05DCF /* Auth */; };
+		6A9669002B9EE4FE00B05DCF /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9668FF2B9EE4FE00B05DCF /* PostgREST */; };
+		6A9669022B9EE69500B05DCF /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9669012B9EE69500B05DCF /* Supabase */; };
+		6A9669042B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9669032B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +42,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A4AD3842B9EE763005CBFD4 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		6A4AD3862B9EEA80005CBFD4 /* ActionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionState.swift; sourceTree = "<group>"; };
+		6A4AD3882B9EEB21005CBFD4 /* _Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Secrets.swift; sourceTree = "<group>"; };
+		6A4AD38F2B9EF775005CBFD4 /* ErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
 		6A7315842B9854220004CB17 /* PowerSyncExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerSyncExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7315872B9854220004CB17 /* PowerSyncExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSyncExampleApp.swift; sourceTree = "<group>"; };
 		6A7315892B9854220004CB17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +53,8 @@
 		6A73158E2B9854240004CB17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6A7315B62B9857AD0004CB17 /* powersync-sqlite-core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "powersync-sqlite-core.xcframework"; path = "../../powersync-sqlite-core.xcframework/powersync-sqlite-core.xcframework"; sourceTree = "<group>"; };
 		6A7315BA2B98BDD30004CB17 /* PowerSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSync.swift; sourceTree = "<group>"; };
+		6A9668FA2B9EDD4B00B05DCF /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
+		6A9669032B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWithEmailAndPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +62,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A9669022B9EE69500B05DCF /* Supabase in Frameworks */,
+				6A9669002B9EE4FE00B05DCF /* PostgREST in Frameworks */,
 				6A7315B42B9855FC0004CB17 /* powersyncswift in Frameworks */,
 				6A7315B72B9857AD0004CB17 /* powersync-sqlite-core.xcframework in Frameworks */,
+				6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */,
+				6A4AD38C2B9EEF55005CBFD4 /* CasePaths in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,11 +94,14 @@
 		6A7315862B9854220004CB17 /* PowerSyncExample */ = {
 			isa = PBXGroup;
 			children = (
+				6A9669052B9EE71700B05DCF /* Supabase */,
 				6A7315872B9854220004CB17 /* PowerSyncExampleApp.swift */,
 				6A7315892B9854220004CB17 /* ContentView.swift */,
 				6A73158B2B9854240004CB17 /* Assets.xcassets */,
 				6A73158D2B9854240004CB17 /* Preview Content */,
 				6A7315BA2B98BDD30004CB17 /* PowerSync.swift */,
+				6A4AD3882B9EEB21005CBFD4 /* _Secrets.swift */,
+				6A4AD38F2B9EF775005CBFD4 /* ErrorText.swift */,
 			);
 			path = PowerSyncExample;
 			sourceTree = "<group>";
@@ -97,6 +120,17 @@
 				6A7315B62B9857AD0004CB17 /* powersync-sqlite-core.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A9669052B9EE71700B05DCF /* Supabase */ = {
+			isa = PBXGroup;
+			children = (
+				6A9668FA2B9EDD4B00B05DCF /* Supabase.swift */,
+				6A9669032B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift */,
+				6A4AD3842B9EE763005CBFD4 /* AuthController.swift */,
+				6A4AD3862B9EEA80005CBFD4 /* ActionState.swift */,
+			);
+			path = Supabase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +152,10 @@
 			name = PowerSyncExample;
 			packageProductDependencies = (
 				6A7315B32B9855FC0004CB17 /* powersyncswift */,
+				6A9668FD2B9EE4FE00B05DCF /* Auth */,
+				6A9668FF2B9EE4FE00B05DCF /* PostgREST */,
+				6A9669012B9EE69500B05DCF /* Supabase */,
+				6A4AD38B2B9EEF55005CBFD4 /* CasePaths */,
 			);
 			productName = PowerSyncExample;
 			productReference = 6A7315842B9854220004CB17 /* PowerSyncExample.app */;
@@ -149,6 +187,8 @@
 			mainGroup = 6A73157B2B9854220004CB17;
 			packageReferences = (
 				6A7315B22B9855FC0004CB17 /* XCRemoteSwiftPackageReference "powersync-kotlin" */,
+				6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				6A4AD38A2B9EEF55005CBFD4 /* XCRemoteSwiftPackageReference "swift-case-paths" */,
 			);
 			productRefGroup = 6A7315852B9854220004CB17 /* Products */;
 			projectDirPath = "";
@@ -177,8 +217,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A73158A2B9854220004CB17 /* ContentView.swift in Sources */,
+				6A4AD3892B9EEB21005CBFD4 /* _Secrets.swift in Sources */,
+				6A4AD3852B9EE763005CBFD4 /* AuthController.swift in Sources */,
+				6A4AD3902B9EF775005CBFD4 /* ErrorText.swift in Sources */,
+				6A9668FB2B9EDD4B00B05DCF /* Supabase.swift in Sources */,
 				6A7315882B9854220004CB17 /* PowerSyncExampleApp.swift in Sources */,
+				6A9669042B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift in Sources */,
 				6A7315BB2B98BDD30004CB17 /* PowerSync.swift in Sources */,
+				6A4AD3872B9EEA80005CBFD4 /* ActionState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +358,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PowerSyncExample/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -341,6 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PowerSyncExample/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -386,6 +434,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6A4AD38A2B9EEF55005CBFD4 /* XCRemoteSwiftPackageReference "swift-case-paths" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-case-paths.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
 		6A7315B22B9855FC0004CB17 /* XCRemoteSwiftPackageReference "powersync-kotlin" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin.git";
@@ -394,13 +450,41 @@
 				version = "0.0.1-ALPHA2.0";
 			};
 		};
+		6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6A4AD38B2B9EEF55005CBFD4 /* CasePaths */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A4AD38A2B9EEF55005CBFD4 /* XCRemoteSwiftPackageReference "swift-case-paths" */;
+			productName = CasePaths;
+		};
 		6A7315B32B9855FC0004CB17 /* powersyncswift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6A7315B22B9855FC0004CB17 /* XCRemoteSwiftPackageReference "powersync-kotlin" */;
 			productName = powersyncswift;
+		};
+		6A9668FD2B9EE4FE00B05DCF /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		6A9668FF2B9EE4FE00B05DCF /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		6A9669012B9EE69500B05DCF /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

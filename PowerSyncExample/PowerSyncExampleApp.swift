@@ -1,12 +1,6 @@
-//
-//  PowerSyncExampleApp.swift
-//  PowerSyncExample
-//
-//  Created by Manrich Van Greunen on 2024/03/06.
-//
-
 import SwiftUI
 import powersyncswift
+import Supabase
 
 @main
 struct PowerSyncExampleApp: App {

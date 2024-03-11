@@ -1,23 +1,14 @@
-
+import Foundation
 import powersyncswift
-
-class DummyConnector: PowerSyncBackendConnector {
-    func fetchCredentials() -> PowerSyncCredentials {
-        return PowerSyncCredentials(endpoint: "", token: "", userId: "", expiresAt: nil)
-    }
-    
-    func uploadData(database:PowerSyncDatabase) {}
-}
-
-typealias SuspendHandle = () async throws -> Any?
 
 class PowerSync {
     var factory = DatabaseDriverFactory()
-    var connector = DummyConnector()
+    var connector = SupabaseConnector(supabaseURL: Secrets.supabaseURL, supabaseKey: Secrets.supabaseAnonKey, powerSyncEndpoint: Secrets.powerSyncEndpoint)
     var schema = Schema(tables: [
-        Table(name: "test", columns: [
-            Column(name: "name", type: ColumnType.text)
-        ], indexes: [], localOnly: false, insertOnly: false, _viewNameOverride: "test")
+        Table(name: "customers", columns: [
+            Column(name: "name", type: ColumnType.text),
+            Column(name: "email", type: ColumnType.text)
+        ], indexes: [], localOnly: false, insertOnly: false, _viewNameOverride: "customers")
     ]
     )
     var db: PowerSyncDatabase!
@@ -25,12 +16,13 @@ class PowerSync {
     func connect() async {
         db = PowerSyncBuilderCompanion().from(factory: factory, schema: schema).build()
         
-        // TODO: Implement connector.
-        //                do {
-        //                    try await db.connect(connector: connector)
-        //                } catch {
-        //                    print("Unexpected error: \(error)") // Catches any other error
-        //                }
+        do {
+            await connector.login(email:Secrets.supabaseTestEmail, password: Secrets.supabaseTestPassword)
+            
+            try await db.connect(connector: connector)
+        } catch {
+            print("Unexpected error: \(error.localizedDescription)") // Catches any other error
+        }
     }
     
     func version() async -> String  {
@@ -43,7 +35,7 @@ class PowerSync {
     
     func firstUser()async -> String {
         do {
-            let result = try await self.db.getOptional(sql: "SELECT name FROM test LIMIT 1", parameters: []) { cursor in
+            let result = try await self.db.getOptional(sql: "SELECT name FROM customers LIMIT 1", parameters: []) { cursor in
                 cursor.getString(index: 0)!
             } as! String?
             return result != nil ? result! : "No Users"
@@ -54,17 +46,35 @@ class PowerSync {
     }
     
     func createUser()async -> Void {
+        
+        await self.writeTransaction {
+            try await self.db.execute(sql: "INSERT OR REPLACE INTO customers (id, name, email) VALUES (?, ?, ?)", parameters:["1", "Test User", "test@example.com"])
+        }
+    }
+    
+    func writeTransaction(_ handle: @escaping SuspendHandle) async {
         do {
-            let _ = try await self.db.writeTransaction(body: SuspendWrapper{
-                try await self.db.execute(sql: "INSERT OR REPLACE INTO test (id, name) VALUES (?, ?)", parameters:["1", "Test User"])
+            let _ = try await self.db.writeTransaction(body: SuspendWrapper {
+                try await handle()
             })
-        }catch {
-            print("Error on createUser: \(error)")
+        } catch {
+            print("Error on writeTransaction: \(error)")
+        }
+    }
+    
+    func readTransaction(_ handle: @escaping SuspendHandle) async -> Any? {
+        do {
+            return try await self.db.readTransaction(body: SuspendWrapper {
+                return try await handle()
+            })
+        } catch {
+            print("Error on writeTransaction: \(error)")
+            return nil
         }
     }
 }
 
-
+typealias SuspendHandle = () async throws -> Any?
 
 private class SuspendWrapper: KotlinSuspendFunction1 {
     

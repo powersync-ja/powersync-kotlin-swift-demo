@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     var ps = PowerSync()
+    
     @State private var versionText = "Loading version..."
     @State private var userText = "Loading user"
     
