@@ -1,36 +1,52 @@
-import Foundation
-import powersyncswift
+import Auth
+import SwiftUI
 import Supabase
+import powersyncswift
 
 
+@Observable
+@MainActor
 class SupabaseConnector: PowerSyncBackendConnector {
-    let powerSyncEndpoint: String
-    let client: SupabaseClient
+    let powerSyncEndpoint: String = Secrets.powerSyncEndpoint
     
     var session: Session?
     
-    init(supabaseURL: URL, supabaseKey: String, powerSyncEndpoint: String) {
-        self.powerSyncEndpoint = powerSyncEndpoint
-        
-        self.client = SupabaseClient(supabaseURL: supabaseURL, supabaseKey: supabaseKey)
-    }
+    @ObservationIgnored
+    private var observeAuthStateChangesTask: Task<Void, Never>?
     
-    func login(email: String, password: String) async {
-        do {
-            self.session = try await self.client.auth.signIn(email: email, password: password)
-        } catch {
-            print("Error signing in to Supabase: \(error)")
+    override init() {
+        super.init()
+        observeAuthStateChangesTask = Task {
+            for await (event, session) in await supabase.auth.authStateChanges {
+                guard [.initialSession, .signedIn, .signedOut].contains(event) else { return }
+                
+                self.session = session
+            }
         }
     }
     
+    var currentUserID: String {
+        guard let id = session?.user.id else {
+            preconditionFailure("Required session.")
+        }
+        
+        return id.uuidString
+    }
+    
+    var sessionExpiresAt: Kotlinx_datetimeInstant {
+        guard let expireAt = session?.expiresAt else {
+            preconditionFailure("Required session.")
+        }
+        
+        return Kotlinx_datetimeInstant.companion.fromEpochMilliseconds(epochMilliseconds: Int64(expireAt))
+    }
     
     override func __fetchCredentials() async throws -> PowerSyncCredentials? {
         if((self.session == nil)){
             throw AuthError.sessionNotFound
         }
-        return PowerSyncCredentials(endpoint: self.powerSyncEndpoint, token: session!.accessToken, userId: session?.user.id.uuidString,
-                                    expiresAt: Kotlinx_datetimeInstant.companion.fromEpochMilliseconds(epochMilliseconds: Int64(session!.expiresAt!)
-                                                                                                      ))
+        return PowerSyncCredentials(endpoint: self.powerSyncEndpoint, token: session!.accessToken, userId: currentUserID,
+                                    expiresAt: sessionExpiresAt)
     }
     
     override func __uploadData(database: any PowerSyncDatabase) async throws {
@@ -41,7 +57,7 @@ class SupabaseConnector: PowerSyncBackendConnector {
             for entry in transaction.crud {
                 lastEntry = entry
                 
-                let table = await client.database.from(entry.table)
+                let table = await supabase.database.from(entry.table)
                 
                 
                 switch entry.op {
@@ -64,5 +80,10 @@ class SupabaseConnector: PowerSyncBackendConnector {
             print("Data upload error - retrying last entry: \(lastEntry!), \(error)")
             throw error
         }
+    }
+    
+    
+    deinit {
+        observeAuthStateChangesTask?.cancel()
     }
 }

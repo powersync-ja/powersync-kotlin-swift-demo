@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A4AD3852B9EE763005CBFD4 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD3842B9EE763005CBFD4 /* AuthController.swift */; };
+		6A4AD3852B9EE763005CBFD4 /* SupabaseConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD3842B9EE763005CBFD4 /* SupabaseConnector.swift */; };
 		6A4AD3872B9EEA80005CBFD4 /* ActionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD3862B9EEA80005CBFD4 /* ActionState.swift */; };
 		6A4AD3892B9EEB21005CBFD4 /* _Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD3882B9EEB21005CBFD4 /* _Secrets.swift */; };
 		6A4AD38C2B9EEF55005CBFD4 /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = 6A4AD38B2B9EEF55005CBFD4 /* CasePaths */; };
@@ -20,11 +20,22 @@
 		6A7315B72B9857AD0004CB17 /* powersync-sqlite-core.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7315B62B9857AD0004CB17 /* powersync-sqlite-core.xcframework */; };
 		6A7315B82B9857AD0004CB17 /* powersync-sqlite-core.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7315B62B9857AD0004CB17 /* powersync-sqlite-core.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A7315BB2B98BDD30004CB17 /* PowerSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7315BA2B98BDD30004CB17 /* PowerSync.swift */; };
-		6A9668FB2B9EDD4B00B05DCF /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9668FA2B9EDD4B00B05DCF /* Supabase.swift */; };
 		6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9668FD2B9EE4FE00B05DCF /* Auth */; };
 		6A9669002B9EE4FE00B05DCF /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9668FF2B9EE4FE00B05DCF /* PostgREST */; };
 		6A9669022B9EE69500B05DCF /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9669012B9EE69500B05DCF /* Supabase */; };
 		6A9669042B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9669032B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift */; };
+		6ABD78672B9F2B4800558A41 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD78662B9F2B4800558A41 /* RootView.swift */; };
+		6ABD78692B9F2BB500558A41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD78682B9F2BB500558A41 /* HomeView.swift */; };
+		6ABD786B2B9F2C1500558A41 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD786A2B9F2C1500558A41 /* TodoListView.swift */; };
+		6ABD786E2B9F2C7B00558A41 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 6ABD786D2B9F2C7B00558A41 /* Collections */; };
+		6ABD78712B9F2CD400558A41 /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 6ABD78702B9F2CD400558A41 /* IdentifiedCollections */; };
+		6ABD78742B9F2CFB00558A41 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 6ABD78732B9F2CFB00558A41 /* SwiftUINavigation */; };
+		6ABD78762B9F2CFB00558A41 /* SwiftUINavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6ABD78752B9F2CFB00558A41 /* SwiftUINavigationCore */; };
+		6ABD78782B9F2D2800558A41 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD78772B9F2D2800558A41 /* Schema.swift */; };
+		6ABD787A2B9F2D8300558A41 /* TodoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD78792B9F2D8300558A41 /* TodoListRow.swift */; };
+		6ABD787C2B9F2E6700558A41 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787B2B9F2E6700558A41 /* Debug.swift */; };
+		6ABD787E2B9F2E8700558A41 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787D2B9F2E8700558A41 /* Constants.swift */; };
+		6ABD78802B9F2F1300558A41 /* AddTodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,7 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6A4AD3842B9EE763005CBFD4 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		6A4AD3842B9EE763005CBFD4 /* SupabaseConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseConnector.swift; sourceTree = "<group>"; };
 		6A4AD3862B9EEA80005CBFD4 /* ActionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionState.swift; sourceTree = "<group>"; };
 		6A4AD3882B9EEB21005CBFD4 /* _Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Secrets.swift; sourceTree = "<group>"; };
 		6A4AD38F2B9EF775005CBFD4 /* ErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
@@ -53,8 +64,15 @@
 		6A73158E2B9854240004CB17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6A7315B62B9857AD0004CB17 /* powersync-sqlite-core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "powersync-sqlite-core.xcframework"; path = "../../powersync-sqlite-core.xcframework/powersync-sqlite-core.xcframework"; sourceTree = "<group>"; };
 		6A7315BA2B98BDD30004CB17 /* PowerSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSync.swift; sourceTree = "<group>"; };
-		6A9668FA2B9EDD4B00B05DCF /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
 		6A9669032B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWithEmailAndPassword.swift; sourceTree = "<group>"; };
+		6ABD78662B9F2B4800558A41 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		6ABD78682B9F2BB500558A41 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6ABD786A2B9F2C1500558A41 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		6ABD78772B9F2D2800558A41 /* Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
+		6ABD78792B9F2D8300558A41 /* TodoListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRow.swift; sourceTree = "<group>"; };
+		6ABD787B2B9F2E6700558A41 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
+		6ABD787D2B9F2E8700558A41 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +80,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ABD786E2B9F2C7B00558A41 /* Collections in Frameworks */,
+				6ABD78712B9F2CD400558A41 /* IdentifiedCollections in Frameworks */,
+				6ABD78742B9F2CFB00558A41 /* SwiftUINavigation in Frameworks */,
 				6A9669022B9EE69500B05DCF /* Supabase in Frameworks */,
 				6A9669002B9EE4FE00B05DCF /* PostgREST in Frameworks */,
 				6A7315B42B9855FC0004CB17 /* powersyncswift in Frameworks */,
 				6A7315B72B9857AD0004CB17 /* powersync-sqlite-core.xcframework in Frameworks */,
+				6ABD78762B9F2CFB00558A41 /* SwiftUINavigationCore in Frameworks */,
 				6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */,
 				6A4AD38C2B9EEF55005CBFD4 /* CasePaths in Frameworks */,
 			);
@@ -94,6 +116,7 @@
 		6A7315862B9854220004CB17 /* PowerSyncExample */ = {
 			isa = PBXGroup;
 			children = (
+				6ABD78682B9F2BB500558A41 /* HomeView.swift */,
 				6A9669052B9EE71700B05DCF /* Supabase */,
 				6A7315872B9854220004CB17 /* PowerSyncExampleApp.swift */,
 				6A7315892B9854220004CB17 /* ContentView.swift */,
@@ -102,6 +125,13 @@
 				6A7315BA2B98BDD30004CB17 /* PowerSync.swift */,
 				6A4AD3882B9EEB21005CBFD4 /* _Secrets.swift */,
 				6A4AD38F2B9EF775005CBFD4 /* ErrorText.swift */,
+				6ABD78662B9F2B4800558A41 /* RootView.swift */,
+				6ABD786A2B9F2C1500558A41 /* TodoListView.swift */,
+				6ABD78772B9F2D2800558A41 /* Schema.swift */,
+				6ABD78792B9F2D8300558A41 /* TodoListRow.swift */,
+				6ABD787B2B9F2E6700558A41 /* Debug.swift */,
+				6ABD787D2B9F2E8700558A41 /* Constants.swift */,
+				6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */,
 			);
 			path = PowerSyncExample;
 			sourceTree = "<group>";
@@ -125,9 +155,8 @@
 		6A9669052B9EE71700B05DCF /* Supabase */ = {
 			isa = PBXGroup;
 			children = (
-				6A9668FA2B9EDD4B00B05DCF /* Supabase.swift */,
 				6A9669032B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift */,
-				6A4AD3842B9EE763005CBFD4 /* AuthController.swift */,
+				6A4AD3842B9EE763005CBFD4 /* SupabaseConnector.swift */,
 				6A4AD3862B9EEA80005CBFD4 /* ActionState.swift */,
 			);
 			path = Supabase;
@@ -156,6 +185,10 @@
 				6A9668FF2B9EE4FE00B05DCF /* PostgREST */,
 				6A9669012B9EE69500B05DCF /* Supabase */,
 				6A4AD38B2B9EEF55005CBFD4 /* CasePaths */,
+				6ABD786D2B9F2C7B00558A41 /* Collections */,
+				6ABD78702B9F2CD400558A41 /* IdentifiedCollections */,
+				6ABD78732B9F2CFB00558A41 /* SwiftUINavigation */,
+				6ABD78752B9F2CFB00558A41 /* SwiftUINavigationCore */,
 			);
 			productName = PowerSyncExample;
 			productReference = 6A7315842B9854220004CB17 /* PowerSyncExample.app */;
@@ -189,6 +222,9 @@
 				6A7315B22B9855FC0004CB17 /* XCRemoteSwiftPackageReference "powersync-kotlin" */,
 				6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */,
 				6A4AD38A2B9EEF55005CBFD4 /* XCRemoteSwiftPackageReference "swift-case-paths" */,
+				6ABD786C2B9F2C7B00558A41 /* XCRemoteSwiftPackageReference "swift-collections" */,
+				6ABD786F2B9F2CD400558A41 /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
+				6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
 			);
 			productRefGroup = 6A7315852B9854220004CB17 /* Products */;
 			projectDirPath = "";
@@ -217,10 +253,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A73158A2B9854220004CB17 /* ContentView.swift in Sources */,
+				6ABD787C2B9F2E6700558A41 /* Debug.swift in Sources */,
+				6ABD78802B9F2F1300558A41 /* AddTodoListView.swift in Sources */,
 				6A4AD3892B9EEB21005CBFD4 /* _Secrets.swift in Sources */,
-				6A4AD3852B9EE763005CBFD4 /* AuthController.swift in Sources */,
+				6ABD786B2B9F2C1500558A41 /* TodoListView.swift in Sources */,
+				6A4AD3852B9EE763005CBFD4 /* SupabaseConnector.swift in Sources */,
+				6ABD787A2B9F2D8300558A41 /* TodoListRow.swift in Sources */,
 				6A4AD3902B9EF775005CBFD4 /* ErrorText.swift in Sources */,
-				6A9668FB2B9EDD4B00B05DCF /* Supabase.swift in Sources */,
+				6ABD787E2B9F2E8700558A41 /* Constants.swift in Sources */,
+				6ABD78672B9F2B4800558A41 /* RootView.swift in Sources */,
+				6ABD78692B9F2BB500558A41 /* HomeView.swift in Sources */,
+				6ABD78782B9F2D2800558A41 /* Schema.swift in Sources */,
 				6A7315882B9854220004CB17 /* PowerSyncExampleApp.swift in Sources */,
 				6A9669042B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift in Sources */,
 				6A7315BB2B98BDD30004CB17 /* PowerSync.swift in Sources */,
@@ -458,6 +501,30 @@
 				minimumVersion = 2.4.0;
 			};
 		};
+		6ABD786C2B9F2C7B00558A41 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+		6ABD786F2B9F2CD400558A41 /* XCRemoteSwiftPackageReference "swift-identified-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-identified-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swiftui-navigation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -485,6 +552,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
+		};
+		6ABD786D2B9F2C7B00558A41 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6ABD786C2B9F2C7B00558A41 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		6ABD78702B9F2CD400558A41 /* IdentifiedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6ABD786F2B9F2CD400558A41 /* XCRemoteSwiftPackageReference "swift-identified-collections" */;
+			productName = IdentifiedCollections;
+		};
+		6ABD78732B9F2CFB00558A41 /* SwiftUINavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			productName = SwiftUINavigation;
+		};
+		6ABD78752B9F2CFB00558A41 /* SwiftUINavigationCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			productName = SwiftUINavigationCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

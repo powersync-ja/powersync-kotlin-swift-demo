@@ -3,7 +3,7 @@ import powersyncswift
 
 class PowerSync {
     var factory = DatabaseDriverFactory()
-    var connector = SupabaseConnector(supabaseURL: Secrets.supabaseURL, supabaseKey: Secrets.supabaseAnonKey, powerSyncEndpoint: Secrets.powerSyncEndpoint)
+//    var connector = SupabaseConnector()
     var schema = Schema(tables: [
         Table(name: "customers", columns: [
             Column(name: "name", type: ColumnType.text),
@@ -16,13 +16,11 @@ class PowerSync {
     func connect() async {
         db = PowerSyncBuilderCompanion().from(factory: factory, schema: schema).build()
         
-        do {
-            await connector.login(email:Secrets.supabaseTestEmail, password: Secrets.supabaseTestPassword)
-            
-            try await db.connect(connector: connector)
-        } catch {
-            print("Unexpected error: \(error.localizedDescription)") // Catches any other error
-        }
+//        do {
+//            try await db.connect(connector: connector)
+//        } catch {
+//            print("Unexpected error: \(error.localizedDescription)") // Catches any other error
+//        }
     }
     
     func version() async -> String  {

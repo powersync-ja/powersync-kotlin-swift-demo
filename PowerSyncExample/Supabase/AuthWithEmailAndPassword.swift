@@ -9,7 +9,7 @@ struct AuthWithEmailAndPassword: View {
     case needsEmailConfirmation
   }
 
-  @Environment(AuthController.self) var auth
+  @Environment(SupabaseConnector.self) var auth
 
   @State var email = ""
   @State var password = ""
@@ -39,9 +39,9 @@ struct AuthWithEmailAndPassword: View {
         }
       }
 
-      if case let .result(.failure(error)) = actionState {
-        ErrorText(error)
-      }
+//      if case let .result(.failure(error)) = actionState {
+//        ErrorText(error)
+//      }
 
       switch actionState {
       case .idle:
@@ -62,14 +62,14 @@ struct AuthWithEmailAndPassword: View {
         }
       }
 
-      Section {
-        Button(
-          mode == .signIn ? "Don't have an account? Sign up." : "Already have an account? Sign in."
-        ) {
-          mode = mode == .signIn ? .signUp : .signIn
-          actionState = .idle
-        }
-      }
+//      Section {
+//        Button(
+//          mode == .signIn ? "Don't have an account? Sign up." : "Already have an account? Sign in."
+//        ) {
+//          mode = mode == .signIn ? .signUp : .signIn
+//          actionState = .idle
+//        }
+//      }
     }
     .onOpenURL { url in
       Task {
@@ -80,47 +80,47 @@ struct AuthWithEmailAndPassword: View {
   }
 
   func primaryActionButtonTapped() async {
-//    do {
-//      actionState = .inFlight
-//      switch mode {
-//      case .signIn:
-//        try await supabase.auth.signIn(email: email, password: password)
-//      case .signUp:
-//        let response = try await supabase.auth.signUp(
-//          email: email,
-//          password: password,
-//          redirectTo: Constants.redirectToURL
-//        )
-//
-//        if case .user = response {
-//          actionState = .result(.success(.needsEmailConfirmation))
-//        }
-//      }
-//    } catch {
-//      withAnimation {
-//        actionState = .result(.failure(error))
-//      }
-//    }
+    do {
+      actionState = .inFlight
+      switch mode {
+      case .signIn:
+        try await supabase.auth.signIn(email: email, password: password)
+      case .signUp:
+        let response = try await supabase.auth.signUp(
+          email: email,
+          password: password,
+          redirectTo: Constants.redirectToURL
+        )
+
+        if case .user = response {
+          actionState = .result(.success(.needsEmailConfirmation))
+        }
+      }
+    } catch {
+      withAnimation {
+        actionState = .result(.failure(error))
+      }
+    }
   }
 
   private func onOpenURL(_ url: URL) async {
-//    do {
-//      try await supabase.auth.session(from: url)
-//    } catch {
-//      debug("Fail to init session with url: \(url)")
-//    }
+    do {
+      try await supabase.auth.session(from: url)
+    } catch {
+      debug("Fail to init session with url: \(url)")
+    }
   }
 
   private func resendConfirmationButtonTapped() async {
-//    do {
-//      try await supabase.auth.resend(email: email, type: .signup)
-//    } catch {
-//      debug("Fail to resend email confirmation: \(error)")
-//    }
+    do {
+      try await supabase.auth.resend(email: email, type: .signup)
+    } catch {
+      debug("Fail to resend email confirmation: \(error)")
+    }
   }
 }
 
 #Preview {
   AuthWithEmailAndPassword()
-    .environment(AuthController())
+    .environment(SupabaseConnector())
 }

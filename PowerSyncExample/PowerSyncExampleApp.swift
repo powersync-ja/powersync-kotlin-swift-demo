@@ -6,7 +6,13 @@ import Supabase
 struct PowerSyncExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            RootView()
+              .environment(SupabaseConnector())
         }
     }
 }
+
+let supabase = SupabaseClient(
+  supabaseURL: Secrets.supabaseURL,
+  supabaseKey: Secrets.supabaseAnonKey)
