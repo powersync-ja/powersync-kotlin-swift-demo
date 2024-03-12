@@ -13,7 +13,6 @@
 		6A4AD38C2B9EEF55005CBFD4 /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = 6A4AD38B2B9EEF55005CBFD4 /* CasePaths */; };
 		6A4AD3902B9EF775005CBFD4 /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD38F2B9EF775005CBFD4 /* ErrorText.swift */; };
 		6A7315882B9854220004CB17 /* PowerSyncExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7315872B9854220004CB17 /* PowerSyncExampleApp.swift */; };
-		6A73158A2B9854220004CB17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7315892B9854220004CB17 /* ContentView.swift */; };
 		6A73158C2B9854240004CB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A73158B2B9854240004CB17 /* Assets.xcassets */; };
 		6A73158F2B9854240004CB17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A73158E2B9854240004CB17 /* Preview Assets.xcassets */; };
 		6A7315B42B9855FC0004CB17 /* powersyncswift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A7315B32B9855FC0004CB17 /* powersyncswift */; };
@@ -59,7 +58,6 @@
 		6A4AD38F2B9EF775005CBFD4 /* ErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
 		6A7315842B9854220004CB17 /* PowerSyncExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerSyncExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7315872B9854220004CB17 /* PowerSyncExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSyncExampleApp.swift; sourceTree = "<group>"; };
-		6A7315892B9854220004CB17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6A73158B2B9854240004CB17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A73158E2B9854240004CB17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6A7315B62B9857AD0004CB17 /* powersync-sqlite-core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "powersync-sqlite-core.xcframework"; path = "../../powersync-sqlite-core.xcframework/powersync-sqlite-core.xcframework"; sourceTree = "<group>"; };
@@ -73,6 +71,7 @@
 		6ABD787B2B9F2E6700558A41 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		6ABD787D2B9F2E8700558A41 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoListView.swift; sourceTree = "<group>"; };
+		6ABD78812B9F5B2000558A41 /* powersync-kotlin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "powersync-kotlin"; path = "../../../Documents/Journey/powersync-kotlin"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +98,7 @@
 		6A73157B2B9854220004CB17 = {
 			isa = PBXGroup;
 			children = (
+				6ABD78812B9F5B2000558A41 /* powersync-kotlin */,
 				6A7315862B9854220004CB17 /* PowerSyncExample */,
 				6A7315852B9854220004CB17 /* Products */,
 				6A7315B52B9857AD0004CB17 /* Frameworks */,
@@ -116,22 +116,22 @@
 		6A7315862B9854220004CB17 /* PowerSyncExample */ = {
 			isa = PBXGroup;
 			children = (
-				6ABD78682B9F2BB500558A41 /* HomeView.swift */,
-				6A9669052B9EE71700B05DCF /* Supabase */,
-				6A7315872B9854220004CB17 /* PowerSyncExampleApp.swift */,
-				6A7315892B9854220004CB17 /* ContentView.swift */,
-				6A73158B2B9854240004CB17 /* Assets.xcassets */,
-				6A73158D2B9854240004CB17 /* Preview Content */,
-				6A7315BA2B98BDD30004CB17 /* PowerSync.swift */,
 				6A4AD3882B9EEB21005CBFD4 /* _Secrets.swift */,
-				6A4AD38F2B9EF775005CBFD4 /* ErrorText.swift */,
-				6ABD78662B9F2B4800558A41 /* RootView.swift */,
-				6ABD786A2B9F2C1500558A41 /* TodoListView.swift */,
-				6ABD78772B9F2D2800558A41 /* Schema.swift */,
-				6ABD78792B9F2D8300558A41 /* TodoListRow.swift */,
-				6ABD787B2B9F2E6700558A41 /* Debug.swift */,
-				6ABD787D2B9F2E8700558A41 /* Constants.swift */,
+				6A4AD3862B9EEA80005CBFD4 /* ActionState.swift */,
 				6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */,
+				6A73158B2B9854240004CB17 /* Assets.xcassets */,
+				6ABD787D2B9F2E8700558A41 /* Constants.swift */,
+				6ABD787B2B9F2E6700558A41 /* Debug.swift */,
+				6A4AD38F2B9EF775005CBFD4 /* ErrorText.swift */,
+				6ABD78682B9F2BB500558A41 /* HomeView.swift */,
+				6A7315BA2B98BDD30004CB17 /* PowerSync.swift */,
+				6A7315872B9854220004CB17 /* PowerSyncExampleApp.swift */,
+				6A73158D2B9854240004CB17 /* Preview Content */,
+				6ABD78662B9F2B4800558A41 /* RootView.swift */,
+				6ABD78772B9F2D2800558A41 /* Schema.swift */,
+				6A9669052B9EE71700B05DCF /* Supabase */,
+				6ABD78792B9F2D8300558A41 /* TodoListRow.swift */,
+				6ABD786A2B9F2C1500558A41 /* TodoListView.swift */,
 			);
 			path = PowerSyncExample;
 			sourceTree = "<group>";
@@ -157,7 +157,6 @@
 			children = (
 				6A9669032B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift */,
 				6A4AD3842B9EE763005CBFD4 /* SupabaseConnector.swift */,
-				6A4AD3862B9EEA80005CBFD4 /* ActionState.swift */,
 			);
 			path = Supabase;
 			sourceTree = "<group>";
@@ -252,7 +251,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A73158A2B9854220004CB17 /* ContentView.swift in Sources */,
 				6ABD787C2B9F2E6700558A41 /* Debug.swift in Sources */,
 				6ABD78802B9F2F1300558A41 /* AddTodoListView.swift in Sources */,
 				6A4AD3892B9EEB21005CBFD4 /* _Secrets.swift in Sources */,
@@ -490,7 +488,7 @@
 			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin.git";
 			requirement = {
 				kind = exactVersion;
-				version = "0.0.1-ALPHA2.0";
+				version = "0.0.1-ALPHA3.0";
 			};
 		};
 		6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */ = {

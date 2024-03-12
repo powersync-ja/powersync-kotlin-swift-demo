@@ -2,11 +2,11 @@ import Auth
 import SwiftUI
 
 struct RootView: View {
-  @Environment(SupabaseConnector.self) var auth
+  @Environment(PowerSync.self) var powerSync
 
   var body: some View {
     NavigationStack {
-      if auth.session == nil {
+        if powerSync.connector.session == nil {
         AuthWithEmailAndPassword()
       } else {
         HomeView()

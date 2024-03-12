@@ -1,26 +1,24 @@
 import Foundation
 import powersyncswift
 
+typealias SuspendHandle = () async throws -> Any?
+
+@Observable
+@MainActor
 class PowerSync {
     var factory = DatabaseDriverFactory()
-//    var connector = SupabaseConnector()
-    var schema = Schema(tables: [
-        Table(name: "customers", columns: [
-            Column(name: "name", type: ColumnType.text),
-            Column(name: "email", type: ColumnType.text)
-        ], indexes: [], localOnly: false, insertOnly: false, _viewNameOverride: "customers")
-    ]
-    )
+    var connector = SupabaseConnector()
+    var schema = createSchema()
     var db: PowerSyncDatabase!
     
     func connect() async {
         db = PowerSyncBuilderCompanion().from(factory: factory, schema: schema).build()
         
-//        do {
-//            try await db.connect(connector: connector)
-//        } catch {
-//            print("Unexpected error: \(error.localizedDescription)") // Catches any other error
-//        }
+        do {
+            try await db.connect(connector: connector)
+        } catch {
+            print("Unexpected error: \(error.localizedDescription)") // Catches any other error
+        }
     }
     
     func version() async -> String  {
@@ -31,48 +29,26 @@ class PowerSync {
         }
     }
     
-    func firstUser()async -> String {
-        do {
-            let result = try await self.db.getOptional(sql: "SELECT name FROM customers LIMIT 1", parameters: []) { cursor in
-                cursor.getString(index: 0)!
-            } as! String?
-            return result != nil ? result! : "No Users"
-        }catch {
-            print("Error on querying firstUser: \(error)")
-        }
-        return "Error"
-    }
-    
-    func createUser()async -> Void {
+    func getTodos() async throws -> [String] {
         
-        await self.writeTransaction {
-            try await self.db.execute(sql: "INSERT OR REPLACE INTO customers (id, name, email) VALUES (?, ?, ?)", parameters:["1", "Test User", "test@example.com"])
+        let res = try await self.db.getAll(sql: "SELECT * FROM todos", parameters: []) { cursor in
+            cursor.getString(index: 0)!
         }
+        
+        return res as! [String]
+        
     }
     
-    func writeTransaction(_ handle: @escaping SuspendHandle) async {
+    func insertTodo(_ todo: PartialTodo) async {
         do {
-            let _ = try await self.db.writeTransaction(body: SuspendWrapper {
-                try await handle()
-            })
-        } catch {
-            print("Error on writeTransaction: \(error)")
-        }
-    }
-    
-    func readTransaction(_ handle: @escaping SuspendHandle) async -> Any? {
-        do {
-            return try await self.db.readTransaction(body: SuspendWrapper {
-                return try await handle()
-            })
-        } catch {
-            print("Error on writeTransaction: \(error)")
-            return nil
+            let newTodo = Todo(id: UUID(), description: todo.description, isComplete: todo.isComplete)
+            
+            let _ = try await self.db.executeWrite(sql: "INSERT INTO todos (id, description, completed) VALUES (uuid(), ?, ?)", parameters: [newTodo.description, newTodo.isComplete])
+        }catch {
+            print("Error: \(error.localizedDescription)")
         }
     }
 }
-
-typealias SuspendHandle = () async throws -> Any?
 
 private class SuspendWrapper: KotlinSuspendFunction1 {
     

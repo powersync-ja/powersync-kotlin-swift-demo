@@ -1,42 +1,37 @@
 import SwiftUI
 
 struct AddTodoListView: View {
-  @Binding var request: CreateTodoRequest
-  let completion: (Result<Todo, Error>) -> Void
-
-  var body: some View {
-    Section {
-      TextField("Description", text: $request.description)
-      Button("Save") {
-        Task { await saveButtonTapped() }
-      }
+    @Environment(PowerSync.self) var powerSync
+    @Binding var newTodo: PartialTodo
+    let completion: (Result<Bool, Error>) -> Void
+    
+    var body: some View {
+        Section {
+            TextField("Description", text: $newTodo.description)
+            Button("Save") {
+                Task.detached {
+                    do {
+                        try await powerSync.insertTodo(newTodo)
+                        completion(.success(true))
+                    } catch {
+                        completion(.failure(error))
+                    }
+                }
+            }
+        }
     }
-  }
-
-  func saveButtonTapped() async {
-    do {
-      let createdTodo: Todo = try await supabase.database.from("todos")
-        .insert(request, returning: .representation)
-        .single()
-        .execute()
-        .value
-      completion(.success(createdTodo))
-    } catch {
-      completion(.failure(error))
-    }
-  }
 }
 
 struct AddTodoListView_Previews: PreviewProvider {
-  static var previews: some View {
-    AddTodoListView(
-      request: .constant(
-        .init(
-          description: "",
-          isComplete: false
-        )
-      )
-    ) { _ in
+    static var previews: some View {
+        AddTodoListView(
+            newTodo: .constant(
+                .init(
+                    description: "",
+                    isComplete: false
+                )
+            )
+        ) { _ in
+        }
     }
-  }
 }

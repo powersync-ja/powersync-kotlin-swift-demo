@@ -5,10 +5,9 @@ import powersyncswift
 
 
 @Observable
-@MainActor
 class SupabaseConnector: PowerSyncBackendConnector {
     let powerSyncEndpoint: String = Secrets.powerSyncEndpoint
-    
+    let client: SupabaseClient = SupabaseClient(supabaseURL: Secrets.supabaseURL, supabaseKey: Secrets.supabaseAnonKey)
     var session: Session?
     
     @ObservationIgnored
@@ -16,8 +15,9 @@ class SupabaseConnector: PowerSyncBackendConnector {
     
     override init() {
         super.init()
+        
         observeAuthStateChangesTask = Task {
-            for await (event, session) in await supabase.auth.authStateChanges {
+            for await (event, session) in await self.client.auth.authStateChanges {
                 guard [.initialSession, .signedIn, .signedOut].contains(event) else { return }
                 
                 self.session = session
@@ -52,22 +52,25 @@ class SupabaseConnector: PowerSyncBackendConnector {
     override func __uploadData(database: any PowerSyncDatabase) async throws {
         
         guard let transaction = try await database.getNextCrudTransaction() else { return }
+        
+        print("Upload called")
+        
         var lastEntry: CrudEntry? = nil
         do {
             for entry in transaction.crud {
                 lastEntry = entry
+                let tableName = entry.table
                 
-                let table = await supabase.database.from(entry.table)
-                
+                let table = await client.database.from(tableName)
                 
                 switch entry.op {
                 case .put:
                     var data = entry.opData ?? [String: String]()
                     data["id"] = entry.id
-                    let _ = try table.upsert(data);
+                    let _ = try await table.upsert(data).execute();
                 case .patch:
                     guard let opData = entry.opData else { continue }
-                    let _ = try table.update(opData).eq("id", value: entry.id)
+                    let _ = try await table.update(opData).eq("id", value: entry.id).execute()
                     
                 case .delete:
                     let _ = try await table.delete().eq( "id", value: entry.id).execute()

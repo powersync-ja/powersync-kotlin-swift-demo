@@ -8,11 +8,7 @@ struct PowerSyncExampleApp: App {
         WindowGroup {
 //            ContentView()
             RootView()
-              .environment(SupabaseConnector())
+              .environment(PowerSync())
         }
     }
 }
-
-let supabase = SupabaseClient(
-  supabaseURL: Secrets.supabaseURL,
-  supabaseKey: Secrets.supabaseAnonKey)

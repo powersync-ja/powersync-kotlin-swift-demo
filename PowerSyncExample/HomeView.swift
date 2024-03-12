@@ -1,15 +1,14 @@
 import SwiftUI
 
 struct HomeView: View {
-  @Environment(SupabaseConnector.self) var auth
-
+    @Environment(PowerSync.self) var powerSync
   var body: some View {
     TodoListView()
       .toolbar {
         ToolbarItem(placement: .cancellationAction) {
           Button("Sign out") {
             Task {
-              try! await supabase.auth.signOut()
+                try! await powerSync.connector.client.auth.signOut()
             }
           }
         }
