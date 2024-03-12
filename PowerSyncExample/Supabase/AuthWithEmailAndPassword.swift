@@ -39,10 +39,6 @@ struct AuthWithEmailAndPassword: View {
                 }
             }
             
-            //      if case let .result(.failure(error)) = actionState {
-            //        ErrorText(error)
-            //      }
-            
             switch actionState {
             case .idle:
                 EmptyView()
@@ -61,15 +57,6 @@ struct AuthWithEmailAndPassword: View {
                     }
                 }
             }
-            
-            //      Section {
-            //        Button(
-            //          mode == .signIn ? "Don't have an account? Sign up." : "Already have an account? Sign in."
-            //        ) {
-            //          mode = mode == .signIn ? .signUp : .signIn
-            //          actionState = .idle
-            //        }
-            //      }
         }
         .onOpenURL { url in
             Task {

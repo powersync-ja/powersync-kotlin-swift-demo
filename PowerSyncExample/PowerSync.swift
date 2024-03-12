@@ -29,24 +29,24 @@ class PowerSync {
         }
     }
     
-    func getTodos() async throws -> [String] {
-        
-        let res = try await self.db.getAll(sql: "SELECT * FROM todos", parameters: []) { cursor in
-            cursor.getString(index: 0)!
+    func watchTodos(_ cb: @escaping (_ todos: [Todo]) -> Void ) async {
+        for await todos in self.db.watch(sql: "SELECT * FROM todos", parameters: [], mapper: { cursor in
+            Todo(id: cursor.getString(index: 0)!, description: cursor.getString(index: 1)!, isComplete: cursor.getBoolean(index: 2)! as! Bool)
+        }) {
+            cb(todos as! [Todo])
         }
-        
-        return res as! [String]
-        
     }
     
-    func insertTodo(_ todo: PartialTodo) async {
-        do {
-            let newTodo = Todo(id: UUID(), description: todo.description, isComplete: todo.isComplete)
-            
-            let _ = try await self.db.executeWrite(sql: "INSERT INTO todos (id, description, completed) VALUES (uuid(), ?, ?)", parameters: [newTodo.description, newTodo.isComplete])
-        }catch {
-            print("Error: \(error.localizedDescription)")
-        }
+    func insertTodo(_ todo: NewTodo) async throws {
+            let _ = try await self.db.executeWrite(sql: "INSERT INTO todos (id, description, completed) VALUES (uuid(), ?, ?)", parameters: [todo.description, todo.isComplete])
+    }
+    
+    func updateTodo(_ todo: Todo) async throws {
+        let _ = try await self.db.executeWrite(sql: "UPDATE todos SET description = ?, completed = ? WHERE id = ?", parameters: [todo.description, todo.isComplete, todo.id])
+    }
+    
+    func deleteTodo(id: String) async throws {
+        let _ = try await self.db.executeWrite(sql: "DELETE FROM todos WHERE id = ?", parameters: [id])
     }
 }
 

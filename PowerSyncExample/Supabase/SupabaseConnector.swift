@@ -53,8 +53,6 @@ class SupabaseConnector: PowerSyncBackendConnector {
         
         guard let transaction = try await database.getNextCrudTransaction() else { return }
         
-        print("Upload called")
-        
         var lastEntry: CrudEntry? = nil
         do {
             for entry in transaction.crud {

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AddTodoListView: View {
     @Environment(PowerSync.self) var powerSync
-    @Binding var newTodo: PartialTodo
+    @Binding var newTodo: NewTodo
     let completion: (Result<Bool, Error>) -> Void
     
     var body: some View {

@@ -13,7 +13,7 @@ func createSchema() -> Schema {
 
 
 struct Todo: Identifiable, Hashable, Decodable {
-    let id: UUID
+    let id: String
     var description: String
     var isComplete: Bool
     
@@ -24,22 +24,7 @@ struct Todo: Identifiable, Hashable, Decodable {
     }
 }
 
-struct PartialTodo: Encodable {
+struct NewTodo: Encodable {
     var description: String
     var isComplete: Bool
-    
-    enum CodingKeys: String, CodingKey {
-        case description
-        case isComplete = "completed"
-    }
-}
-
-struct UpdateTodoRequest: Encodable {
-    var description: String?
-    var isComplete: Bool?
-    
-    enum CodingKeys: String, CodingKey {
-        case description
-        case isComplete = "completed"
-    }
 }

@@ -22,7 +22,7 @@ struct TodoListRow_Previews: PreviewProvider {
   static var previews: some View {
     TodoListRow(
       todo: .init(
-        id: UUID(),
+        id: UUID().uuidString,
         description: "",
         isComplete: false
       )

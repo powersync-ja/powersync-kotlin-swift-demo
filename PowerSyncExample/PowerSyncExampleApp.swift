@@ -6,7 +6,6 @@ import Supabase
 struct PowerSyncExampleApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
             RootView()
               .environment(PowerSync())
         }
