@@ -38,29 +38,47 @@ class PowerSync {
     }
     
     func insertTodo(_ todo: NewTodo) async throws {
-            let _ = try await self.db.executeWrite(sql: "INSERT INTO todos (id, description, completed) VALUES (uuid(), ?, ?)", parameters: [todo.description, todo.isComplete])
+        let _ = try await self.db.execute(sql: "INSERT INTO todos (id, description, completed) VALUES (uuid(), ?, ?)", parameters: [todo.description, todo.isComplete])
     }
     
     func updateTodo(_ todo: Todo) async throws {
-        let _ = try await self.db.executeWrite(sql: "UPDATE todos SET description = ?, completed = ? WHERE id = ?", parameters: [todo.description, todo.isComplete, todo.id])
+        let _ = try await self.db.execute(sql: "UPDATE todos SET description = ?, completed = ? WHERE id = ?", parameters: [todo.description, todo.isComplete, todo.id])
     }
     
     func deleteTodo(id: String) async throws {
-        let _ = try await self.db.executeWrite(sql: "DELETE FROM todos WHERE id = ?", parameters: [id])
+        let _ = try await self.db.execute(sql: "DELETE FROM todos WHERE id = ?", parameters: [id])
+    }
+    
+    func writeTransaction(_ queryHandle: @escaping SuspendHandle) async throws -> Any? {
+        return try await self.db.writeTransaction(body: SuspendTaskWrapper {
+            return Task {
+                return try await queryHandle()
+            }
+        })
+    }
+    
+    func readTransaction(_ queryHandle: @escaping SuspendHandle) async throws -> Any? {
+        return try await self.db.readTransaction(body: SuspendTaskWrapper {
+            return Task {
+                return try await queryHandle()
+            }
+        })
     }
 }
 
-private class SuspendWrapper: KotlinSuspendFunction1 {
-    
-    let handle: SuspendHandle
-    init(_ handle: @escaping SuspendHandle){
+
+private class SuspendTaskWrapper: KotlinSuspendFunction1 {
+    let handle: () throws -> Any?
+    init(_ handle: @escaping () throws -> Any?){
         self.handle = handle
     }
     
     func __invoke(p1: Any?, completionHandler: @escaping (Any?, Error?) -> Void) {
-        Task {
-            let res = try await self.handle()
+        do {
+            let res = try self.handle()
             completionHandler(res, nil)
+        } catch {
+            completionHandler(nil, error)
         }
     }
 }

@@ -17,12 +17,10 @@ struct TodoListView: View {
                 ErrorText(error)
             }
             
-            if(editing){
-                IfLet($newTodo) { $newTodo in
-                    AddTodoListView(newTodo: $newTodo) { result in
-                        withAnimation {
-                            editing = false
-                        }
+            IfLet($newTodo) { $newTodo in
+                AddTodoListView(newTodo: $newTodo) { result in
+                    withAnimation {
+                        self.newTodo = nil
                     }
                 }
             }
@@ -44,14 +42,13 @@ struct TodoListView: View {
         .navigationTitle("Todos")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
-                if newTodo == nil {
+                if (newTodo == nil) {
                     Button {
                         withAnimation {
                             newTodo = .init(
                                 description: "",
                                 isComplete: false
                             )
-                            editing = true
                         }
                     } label: {
                         Label("Add", systemImage: "plus")

@@ -15,9 +15,6 @@
 		6A7315882B9854220004CB17 /* PowerSyncExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7315872B9854220004CB17 /* PowerSyncExampleApp.swift */; };
 		6A73158C2B9854240004CB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A73158B2B9854240004CB17 /* Assets.xcassets */; };
 		6A73158F2B9854240004CB17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A73158E2B9854240004CB17 /* Preview Assets.xcassets */; };
-		6A7315B42B9855FC0004CB17 /* powersyncswift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A7315B32B9855FC0004CB17 /* powersyncswift */; };
-		6A7315B72B9857AD0004CB17 /* powersync-sqlite-core.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7315B62B9857AD0004CB17 /* powersync-sqlite-core.xcframework */; };
-		6A7315B82B9857AD0004CB17 /* powersync-sqlite-core.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A7315B62B9857AD0004CB17 /* powersync-sqlite-core.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A7315BB2B98BDD30004CB17 /* PowerSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7315BA2B98BDD30004CB17 /* PowerSync.swift */; };
 		6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9668FD2B9EE4FE00B05DCF /* Auth */; };
 		6A9669002B9EE4FE00B05DCF /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9668FF2B9EE4FE00B05DCF /* PostgREST */; };
@@ -35,16 +32,19 @@
 		6ABD787C2B9F2E6700558A41 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787B2B9F2E6700558A41 /* Debug.swift */; };
 		6ABD787E2B9F2E8700558A41 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787D2B9F2E8700558A41 /* Constants.swift */; };
 		6ABD78802B9F2F1300558A41 /* AddTodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */; };
+		6AC6A3062BA18313006CE8D9 /* powersync-sqlite-core.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC6A3052BA18313006CE8D9 /* powersync-sqlite-core.xcframework */; };
+		6AC6A3072BA18313006CE8D9 /* powersync-sqlite-core.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC6A3052BA18313006CE8D9 /* powersync-sqlite-core.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6AC6A3112BA19942006CE8D9 /* powersyncswift in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC6A3102BA19942006CE8D9 /* powersyncswift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6A7315B92B9857AD0004CB17 /* Embed Frameworks */ = {
+		6AC6A3082BA18313006CE8D9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6A7315B82B9857AD0004CB17 /* powersync-sqlite-core.xcframework in Embed Frameworks */,
+				6AC6A3072BA18313006CE8D9 /* powersync-sqlite-core.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,7 +60,6 @@
 		6A7315872B9854220004CB17 /* PowerSyncExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSyncExampleApp.swift; sourceTree = "<group>"; };
 		6A73158B2B9854240004CB17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A73158E2B9854240004CB17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6A7315B62B9857AD0004CB17 /* powersync-sqlite-core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "powersync-sqlite-core.xcframework"; path = "../../powersync-sqlite-core.xcframework/powersync-sqlite-core.xcframework"; sourceTree = "<group>"; };
 		6A7315BA2B98BDD30004CB17 /* PowerSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSync.swift; sourceTree = "<group>"; };
 		6A9669032B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWithEmailAndPassword.swift; sourceTree = "<group>"; };
 		6ABD78662B9F2B4800558A41 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -71,7 +70,7 @@
 		6ABD787B2B9F2E6700558A41 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		6ABD787D2B9F2E8700558A41 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoListView.swift; sourceTree = "<group>"; };
-		6ABD78812B9F5B2000558A41 /* powersync-kotlin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "powersync-kotlin"; path = "../../../Documents/Journey/powersync-kotlin"; sourceTree = "<group>"; };
+		6AC6A3052BA18313006CE8D9 /* powersync-sqlite-core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "powersync-sqlite-core.xcframework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +83,11 @@
 				6ABD78742B9F2CFB00558A41 /* SwiftUINavigation in Frameworks */,
 				6A9669022B9EE69500B05DCF /* Supabase in Frameworks */,
 				6A9669002B9EE4FE00B05DCF /* PostgREST in Frameworks */,
-				6A7315B42B9855FC0004CB17 /* powersyncswift in Frameworks */,
-				6A7315B72B9857AD0004CB17 /* powersync-sqlite-core.xcframework in Frameworks */,
 				6ABD78762B9F2CFB00558A41 /* SwiftUINavigationCore in Frameworks */,
+				6AC6A3062BA18313006CE8D9 /* powersync-sqlite-core.xcframework in Frameworks */,
 				6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */,
 				6A4AD38C2B9EEF55005CBFD4 /* CasePaths in Frameworks */,
+				6AC6A3112BA19942006CE8D9 /* powersyncswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +97,6 @@
 		6A73157B2B9854220004CB17 = {
 			isa = PBXGroup;
 			children = (
-				6ABD78812B9F5B2000558A41 /* powersync-kotlin */,
 				6A7315862B9854220004CB17 /* PowerSyncExample */,
 				6A7315852B9854220004CB17 /* Products */,
 				6A7315B52B9857AD0004CB17 /* Frameworks */,
@@ -147,7 +145,7 @@
 		6A7315B52B9857AD0004CB17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6A7315B62B9857AD0004CB17 /* powersync-sqlite-core.xcframework */,
+				6AC6A3052BA18313006CE8D9 /* powersync-sqlite-core.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,7 +169,7 @@
 				6A7315802B9854220004CB17 /* Sources */,
 				6A7315812B9854220004CB17 /* Frameworks */,
 				6A7315822B9854220004CB17 /* Resources */,
-				6A7315B92B9857AD0004CB17 /* Embed Frameworks */,
+				6AC6A3082BA18313006CE8D9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,7 +177,6 @@
 			);
 			name = PowerSyncExample;
 			packageProductDependencies = (
-				6A7315B32B9855FC0004CB17 /* powersyncswift */,
 				6A9668FD2B9EE4FE00B05DCF /* Auth */,
 				6A9668FF2B9EE4FE00B05DCF /* PostgREST */,
 				6A9669012B9EE69500B05DCF /* Supabase */,
@@ -188,6 +185,7 @@
 				6ABD78702B9F2CD400558A41 /* IdentifiedCollections */,
 				6ABD78732B9F2CFB00558A41 /* SwiftUINavigation */,
 				6ABD78752B9F2CFB00558A41 /* SwiftUINavigationCore */,
+				6AC6A3102BA19942006CE8D9 /* powersyncswift */,
 			);
 			productName = PowerSyncExample;
 			productReference = 6A7315842B9854220004CB17 /* PowerSyncExample.app */;
@@ -218,12 +216,12 @@
 			);
 			mainGroup = 6A73157B2B9854220004CB17;
 			packageReferences = (
-				6A7315B22B9855FC0004CB17 /* XCRemoteSwiftPackageReference "powersync-kotlin" */,
 				6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */,
 				6A4AD38A2B9EEF55005CBFD4 /* XCRemoteSwiftPackageReference "swift-case-paths" */,
 				6ABD786C2B9F2C7B00558A41 /* XCRemoteSwiftPackageReference "swift-collections" */,
 				6ABD786F2B9F2CD400558A41 /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
 				6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
+				6AC6A30F2BA19942006CE8D9 /* XCRemoteSwiftPackageReference "powersync-kotlin" */,
 			);
 			productRefGroup = 6A7315852B9854220004CB17 /* Products */;
 			projectDirPath = "";
@@ -483,14 +481,6 @@
 				minimumVersion = 1.3.0;
 			};
 		};
-		6A7315B22B9855FC0004CB17 /* XCRemoteSwiftPackageReference "powersync-kotlin" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin.git";
-			requirement = {
-				kind = exactVersion;
-				version = "0.0.1-ALPHA3.0";
-			};
-		};
 		6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
@@ -523,6 +513,14 @@
 				minimumVersion = 1.2.1;
 			};
 		};
+		6AC6A30F2BA19942006CE8D9 /* XCRemoteSwiftPackageReference "powersync-kotlin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin.git";
+			requirement = {
+				kind = revision;
+				revision = f124bedb181b6dc4f76103a9e2bd5c4d248b506a;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -530,11 +528,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6A4AD38A2B9EEF55005CBFD4 /* XCRemoteSwiftPackageReference "swift-case-paths" */;
 			productName = CasePaths;
-		};
-		6A7315B32B9855FC0004CB17 /* powersyncswift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6A7315B22B9855FC0004CB17 /* XCRemoteSwiftPackageReference "powersync-kotlin" */;
-			productName = powersyncswift;
 		};
 		6A9668FD2B9EE4FE00B05DCF /* Auth */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -570,6 +563,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
 			productName = SwiftUINavigationCore;
+		};
+		6AC6A3102BA19942006CE8D9 /* powersyncswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AC6A30F2BA19942006CE8D9 /* XCRemoteSwiftPackageReference "powersync-kotlin" */;
+			productName = powersyncswift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
