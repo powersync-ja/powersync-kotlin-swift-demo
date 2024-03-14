@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6A4AD3852B9EE763005CBFD4 /* SupabaseConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD3842B9EE763005CBFD4 /* SupabaseConnector.swift */; };
-		6A4AD3872B9EEA80005CBFD4 /* ActionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD3862B9EEA80005CBFD4 /* ActionState.swift */; };
 		6A4AD3892B9EEB21005CBFD4 /* _Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD3882B9EEB21005CBFD4 /* _Secrets.swift */; };
-		6A4AD38C2B9EEF55005CBFD4 /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = 6A4AD38B2B9EEF55005CBFD4 /* CasePaths */; };
 		6A4AD3902B9EF775005CBFD4 /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD38F2B9EF775005CBFD4 /* ErrorText.swift */; };
 		6A7315882B9854220004CB17 /* PowerSyncExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7315872B9854220004CB17 /* PowerSyncExampleApp.swift */; };
 		6A73158C2B9854240004CB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A73158B2B9854240004CB17 /* Assets.xcassets */; };
@@ -53,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		6A4AD3842B9EE763005CBFD4 /* SupabaseConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseConnector.swift; sourceTree = "<group>"; };
-		6A4AD3862B9EEA80005CBFD4 /* ActionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionState.swift; sourceTree = "<group>"; };
 		6A4AD3882B9EEB21005CBFD4 /* _Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Secrets.swift; sourceTree = "<group>"; };
 		6A4AD38F2B9EF775005CBFD4 /* ErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
 		6A7315842B9854220004CB17 /* PowerSyncExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerSyncExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +83,6 @@
 				6ABD78762B9F2CFB00558A41 /* SwiftUINavigationCore in Frameworks */,
 				6AC6A3062BA18313006CE8D9 /* powersync-sqlite-core.xcframework in Frameworks */,
 				6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */,
-				6A4AD38C2B9EEF55005CBFD4 /* CasePaths in Frameworks */,
 				6AC6A3112BA19942006CE8D9 /* powersyncswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				6A4AD3882B9EEB21005CBFD4 /* _Secrets.swift */,
-				6A4AD3862B9EEA80005CBFD4 /* ActionState.swift */,
 				6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */,
 				6A73158B2B9854240004CB17 /* Assets.xcassets */,
 				6ABD787D2B9F2E8700558A41 /* Constants.swift */,
@@ -180,7 +175,6 @@
 				6A9668FD2B9EE4FE00B05DCF /* Auth */,
 				6A9668FF2B9EE4FE00B05DCF /* PostgREST */,
 				6A9669012B9EE69500B05DCF /* Supabase */,
-				6A4AD38B2B9EEF55005CBFD4 /* CasePaths */,
 				6ABD786D2B9F2C7B00558A41 /* Collections */,
 				6ABD78702B9F2CD400558A41 /* IdentifiedCollections */,
 				6ABD78732B9F2CFB00558A41 /* SwiftUINavigation */,
@@ -217,7 +211,6 @@
 			mainGroup = 6A73157B2B9854220004CB17;
 			packageReferences = (
 				6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */,
-				6A4AD38A2B9EEF55005CBFD4 /* XCRemoteSwiftPackageReference "swift-case-paths" */,
 				6ABD786C2B9F2C7B00558A41 /* XCRemoteSwiftPackageReference "swift-collections" */,
 				6ABD786F2B9F2CD400558A41 /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
 				6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
@@ -263,7 +256,6 @@
 				6A7315882B9854220004CB17 /* PowerSyncExampleApp.swift in Sources */,
 				6A9669042B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift in Sources */,
 				6A7315BB2B98BDD30004CB17 /* PowerSync.swift in Sources */,
-				6A4AD3872B9EEA80005CBFD4 /* ActionState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,14 +465,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6A4AD38A2B9EEF55005CBFD4 /* XCRemoteSwiftPackageReference "swift-case-paths" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-case-paths.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.0;
-			};
-		};
 		6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
@@ -524,11 +508,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6A4AD38B2B9EEF55005CBFD4 /* CasePaths */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6A4AD38A2B9EEF55005CBFD4 /* XCRemoteSwiftPackageReference "swift-case-paths" */;
-			productName = CasePaths;
-		};
 		6A9668FD2B9EE4FE00B05DCF /* Auth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */;

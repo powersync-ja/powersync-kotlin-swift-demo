@@ -1,5 +1,11 @@
 import SwiftUI
 
+enum ActionState<Success, Failure: Error> {
+  case idle
+  case inFlight
+  case result(Result<Success, Failure>)
+}
+
 struct AuthWithEmailAndPassword: View {
     enum Mode {
         case signIn, signUp

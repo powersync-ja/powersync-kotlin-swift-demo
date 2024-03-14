@@ -8,7 +8,7 @@ struct HomeView: View {
         ToolbarItem(placement: .cancellationAction) {
           Button("Sign out") {
             Task {
-                try! await powerSync.connector.client.auth.signOut()
+                try await powerSync.connector.client.auth.signOut()
             }
           }
         }

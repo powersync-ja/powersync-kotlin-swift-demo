@@ -64,8 +64,10 @@ struct TodoListView: View {
         }
         .task {
             await powerSync.connect()
-            await powerSync.watchTodos { tds in
-                todos = IdentifiedArrayOf(uniqueElements: tds)
+            let watchTask = Task {
+                await powerSync.watchTodos { tds in
+                    todos = IdentifiedArrayOf(uniqueElements: tds)
+                }
             }
         }
     }
