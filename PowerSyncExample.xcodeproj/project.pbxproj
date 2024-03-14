@@ -517,8 +517,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin.git";
 			requirement = {
-				kind = revision;
-				revision = f124bedb181b6dc4f76103a9e2bd5c4d248b506a;
+				kind = exactVersion;
+				version = "0.0.1-ALPHA4.0";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
