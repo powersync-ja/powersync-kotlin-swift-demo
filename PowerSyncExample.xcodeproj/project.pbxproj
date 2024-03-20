@@ -502,7 +502,7 @@
 			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin.git";
 			requirement = {
 				kind = exactVersion;
-				version = "0.0.1-ALPHA4.0";
+				version = "0.0.1-ALPHA5.0";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

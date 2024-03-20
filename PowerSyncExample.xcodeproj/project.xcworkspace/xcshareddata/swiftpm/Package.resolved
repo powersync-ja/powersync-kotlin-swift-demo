@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/powersync-ja/powersync-kotlin.git",
       "state" : {
-        "revision" : "f124bedb181b6dc4f76103a9e2bd5c4d248b506a",
-        "version" : "0.0.1-ALPHA4.0"
+        "revision" : "00d0bfe9800dc39d8cd4dcade5611b744216b842",
+        "version" : "0.0.1-ALPHA5.0"
       }
     },
     {
