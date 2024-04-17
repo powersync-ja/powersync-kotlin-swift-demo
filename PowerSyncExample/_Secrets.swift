@@ -5,7 +5,4 @@ enum Secrets {
     static let supabaseURL = URL(string: "https://wtilkjczshmzekrjelco.supabase.co")!
     static let supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind0aWxramN6c2htemVrcmplbGNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDUwNDM2MTYsImV4cCI6MjAyMDYxOTYxNn0.E4DWa1ftn92_rQP-aLTsQHsZufouhMmzBfsCiX2p5eM"
     
-    //    Test user
-    static let supabaseTestEmail = "hello@powersync.com"
-    static let supabaseTestPassword = "6l7VVgla16OXI?W6.;$a"
 }
