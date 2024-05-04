@@ -47,4 +47,49 @@ bucket_definitions:
 
 ## Configure The App
 
-TODO
+Open the project in XCode. 
+
+Open the “_Secrets” file and fill in the placeholder values. 
+
+You can find the Supabase values under "Project Settings" -> "API" in your Supabase dashboard — under the "URL" section, and anon key under "Project API keys")
+
+You can obtain your PowerSync Instance URL by following these steps:
+
+- In the project tree on the PowerSync dashboard, right click on the instance you created earlier
+- Click "Edit instance"
+- Click on "Instance URL" to copy the value
+
+## Configure XCode access to SDK binary
+The below steps are required by [KMMBridge](https://touchlab.co/quick-start-with-kmmbridge-1-hour-tutorial#configure-xcode-clients)
+### Create GitHub Personal Access Token (PAT)
+In your GitHub
+
+1. Under your user account, navigate to “Settings” -> “Developer Settings” -> “Personal access tokens” -> “Tokens (classic)”
+2. Click “Generate new token” and select “Generate new token (classic)”
+3. Given the token a name e.g. PowerSync XCode
+4. Set the expiration date to “No expiration”, since we won’t be giving this token any sensitive privileges
+5. Under “Select scopes”, enable the “read:packages” checkbox (don’t need “write:packages”)
+6. Click Generate Token
+7. Copy the value for the next step
+
+### Create .netrc file
+
+1. Create a file `~/.netrc` with the following contents:
+
+```
+machine maven.pkg.github.com
+  login [your GitHub username]
+  password [your PAT from the previous step]
+```
+
+### Finish XCode configuration
+
+1. Clear Swift caches
+```
+rm -rf ~/Library/Caches/org.swift.swiftpm
+rm -rf ~/Library/org.swift.swiftpm
+```
+
+2. Reset Packages in Xcode. File->Packages->Reset Packages
+3. Clean and Rebuild project
+
