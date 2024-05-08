@@ -11,7 +11,7 @@ A simple Swift app using the PowerSync Swift SDK. Built with KMMBridge + SKIE an
 
 ## Set up Supabase Project
 
-Create a new Supabase project, and paste and run the below SQL  in the Supabase SQL editor.
+Create a new Supabase project, and paste and run the below SQL in the Supabase SQL editor.
 
 It does the following:
 
@@ -19,17 +19,17 @@ It does the following:
 2. Create a logical replication publication called `powersync` for  `todos`.
 
 ```sql
- 1 -- Create tables
- 2 create table
- 3   public.todos (
- 4     id uuid not null default gen_random_uuid (),
- 5     description text not null,
- 6     completed boolean not null default false,
- 7     constraint todos_pkey primary key (id),
- 8   ) tablespace pg_default;
- 9
-10 -- Create publication for powersync
-11 create publication powersync for table todos;
+-- Create tables
+create table
+  public.todos (
+    id uuid not null default gen_random_uuid (),
+    description text not null,
+    completed boolean not null default false,
+    constraint todos_pkey primary key (id)
+  ) tablespace pg_default;
+
+-- Create publication for powersync
+create publication powersync for table todos;
 ```
 
 ## Set up PowerSync Instance
@@ -51,7 +51,7 @@ Open the project in XCode.
 
 Open the “_Secrets” file and fill in the placeholder values. 
 
-You can find the Supabase values under "Project Settings" -> "API" in your Supabase dashboard — under the "URL" section, and anon key under "Project API keys")
+You can find the Supabase values under "Project Settings" -> "API" in your Supabase dashboard — under the "URL" section, and anon key under "Project API keys".
 
 You can obtain your PowerSync Instance URL by following these steps:
 
@@ -60,9 +60,12 @@ You can obtain your PowerSync Instance URL by following these steps:
 - Click on "Instance URL" to copy the value
 
 ## Configure XCode access to SDK binary
-The below steps are required by [KMMBridge](https://touchlab.co/quick-start-with-kmmbridge-1-hour-tutorial#configure-xcode-clients)
+
+The below steps are required by [KMMBridge](https://touchlab.co/quick-start-with-kmmbridge-1-hour-tutorial#configure-xcode-clients):
+
 ### Create GitHub Personal Access Token (PAT)
-In your GitHub
+
+In your GitHub:
 
 1. Under your user account, navigate to “Settings” -> “Developer Settings” -> “Personal access tokens” -> “Tokens (classic)”
 2. Click “Generate new token” and select “Generate new token (classic)”
@@ -90,6 +93,6 @@ rm -rf ~/Library/Caches/org.swift.swiftpm
 rm -rf ~/Library/org.swift.swiftpm
 ```
 
-2. Reset Packages in Xcode. File->Packages->Reset Packages
-3. Clean and Rebuild project
-
+2. In XCode:
+- Reset Packages: File -> Packages -> Reset Package Caches
+- Build project: Product -> Clean Build Folder; then Build.
