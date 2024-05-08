@@ -59,7 +59,7 @@ You can obtain your PowerSync Instance URL by following these steps:
 - Click "Edit instance"
 - Click on "Instance URL" to copy the value
 
-## Configure XCode access to SDK binary
+## Configure Xcode access to SDK binary
 
 The below steps are required by [KMMBridge](https://touchlab.co/quick-start-with-kmmbridge-1-hour-tutorial#configure-xcode-clients):
 
@@ -93,6 +93,6 @@ rm -rf ~/Library/Caches/org.swift.swiftpm
 rm -rf ~/Library/org.swift.swiftpm
 ```
 
-2. In XCode:
+2. In Xcode:
 - Reset Packages: File -> Packages -> Reset Package Caches
 - Build project: Product -> Clean Build Folder; then Build.
