@@ -32,6 +32,10 @@ create table
 create publication powersync for table todos;
 ```
 
+### Set up Supabase User
+
+In your Supabase Dashboard, under "Authentication", click on "Add User" -> "Create new user" and create a user for yourself to test with.
+
 ## Set up PowerSync Instance
 
 Create a new PowerSync instance, connecting to the database of the Supabase project (find detailed instructions in the “Connect PowerSync to Your Database” section of our [Supabase setup guide](https://docs.powersync.com/usage/installation/database-setup/supabase#connect-powersync-to-your-database)).
@@ -95,4 +99,8 @@ rm -rf ~/Library/org.swift.swiftpm
 
 2. In Xcode:
 - Reset Packages: File -> Packages -> Reset Package Caches
-- Build project: Product -> Clean Build Folder; then Build.
+- Clean Build: Product -> Clean Build Folder.
+
+## Run project
+
+Build the project, launch the app and sign in with the test user you created in Supabase earlier.
