@@ -1,7 +1,7 @@
 import Auth
 import SwiftUI
 import Supabase
-import powersyncswift
+import PowerSync
 
 
 @Observable
@@ -45,8 +45,7 @@ class SupabaseConnector: PowerSyncBackendConnector {
         if((self.session == nil)){
             throw AuthError.sessionNotFound
         }
-        return PowerSyncCredentials(endpoint: self.powerSyncEndpoint, token: session!.accessToken, userId: currentUserID,
-                                    expiresAt: sessionExpiresAt)
+        return PowerSyncCredentials(endpoint: self.powerSyncEndpoint, token: session!.accessToken, userId: currentUserID)
     }
     
     override func __uploadData(database: any PowerSyncDatabase) async throws {

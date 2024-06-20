@@ -1,5 +1,5 @@
 import Foundation
-import powersyncswift
+import PowerSync
 
 
 func createSchema() -> Schema {
