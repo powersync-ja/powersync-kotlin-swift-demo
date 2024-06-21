@@ -1,5 +1,5 @@
 import Foundation
-import powersyncswift
+import PowerSync
 
 typealias SuspendHandle = () async throws -> Any?
 
@@ -15,7 +15,7 @@ class PowerSync {
         db = PowerSyncBuilderCompanion().from(factory: factory, schema: schema).build()
         
         do {
-            try await db.connect(connector: connector)
+            try await db.connect(connector: connector,crudThrottleMs: 100,retryDelayMs:100)
         } catch {
             print("Unexpected error: \(error.localizedDescription)") // Catches any other error
         }

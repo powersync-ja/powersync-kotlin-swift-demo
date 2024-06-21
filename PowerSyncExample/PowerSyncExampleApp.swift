@@ -1,5 +1,5 @@
 import SwiftUI
-import powersyncswift
+import PowerSync
 import Supabase
 
 @main

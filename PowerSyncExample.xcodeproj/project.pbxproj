@@ -32,7 +32,7 @@
 		6ABD78802B9F2F1300558A41 /* AddTodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */; };
 		6AC6A3062BA18313006CE8D9 /* powersync-sqlite-core.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC6A3052BA18313006CE8D9 /* powersync-sqlite-core.xcframework */; };
 		6AC6A3072BA18313006CE8D9 /* powersync-sqlite-core.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC6A3052BA18313006CE8D9 /* powersync-sqlite-core.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6AC6A3112BA19942006CE8D9 /* powersyncswift in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC6A3102BA19942006CE8D9 /* powersyncswift */; };
+		B67712722C240A1300BFA931 /* PowerSync in Frameworks */ = {isa = PBXBuildFile; productRef = B67712712C240A1300BFA931 /* PowerSync */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +68,30 @@
 		6ABD787D2B9F2E8700558A41 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoListView.swift; sourceTree = "<group>"; };
 		6AC6A3052BA18313006CE8D9 /* powersync-sqlite-core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "powersync-sqlite-core.xcframework"; sourceTree = "<group>"; };
+		B67712702C2404E300BFA931 /* powersync-kotlin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "powersync-kotlin"; path = "../powersync-kotlin"; sourceTree = "<group>"; };
+		B6F4210E2BC42F450005D0D0 /* cstubs.bc */ = {isa = PBXFileReference; lastKnownFileType = file; path = cstubs.bc; sourceTree = "<group>"; };
+		B6F421102BC42F450005D0D0 /* manifest.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = manifest.properties; sourceTree = "<group>"; };
+		B6F421122BC42F450005D0D0 /* cstubs.bc */ = {isa = PBXFileReference; lastKnownFileType = file; path = cstubs.bc; sourceTree = "<group>"; };
+		B6F421142BC42F450005D0D0 /* manifest.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = manifest.properties; sourceTree = "<group>"; };
+		B6F421162BC42F450005D0D0 /* core-cinterop-powersync-sqlite-core.klib */ = {isa = PBXFileReference; lastKnownFileType = file; path = "core-cinterop-powersync-sqlite-core.klib"; sourceTree = "<group>"; };
+		B6F421172BC42F450005D0D0 /* core-cinterop-sqlite.klib */ = {isa = PBXFileReference; lastKnownFileType = file; path = "core-cinterop-sqlite.klib"; sourceTree = "<group>"; };
+		B6F421192BC42F450005D0D0 /* core.klib */ = {isa = PBXFileReference; lastKnownFileType = file; path = core.klib; sourceTree = "<group>"; };
+		B6F4211D2BC42F450005D0D0 /* cstubs.bc */ = {isa = PBXFileReference; lastKnownFileType = file; path = cstubs.bc; sourceTree = "<group>"; };
+		B6F4211F2BC42F450005D0D0 /* manifest.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = manifest.properties; sourceTree = "<group>"; };
+		B6F421212BC42F450005D0D0 /* cstubs.bc */ = {isa = PBXFileReference; lastKnownFileType = file; path = cstubs.bc; sourceTree = "<group>"; };
+		B6F421232BC42F450005D0D0 /* manifest.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = manifest.properties; sourceTree = "<group>"; };
+		B6F421252BC42F450005D0D0 /* core-cinterop-powersync-sqlite-core.klib */ = {isa = PBXFileReference; lastKnownFileType = file; path = "core-cinterop-powersync-sqlite-core.klib"; sourceTree = "<group>"; };
+		B6F421262BC42F450005D0D0 /* core-cinterop-sqlite.klib */ = {isa = PBXFileReference; lastKnownFileType = file; path = "core-cinterop-sqlite.klib"; sourceTree = "<group>"; };
+		B6F421282BC42F450005D0D0 /* core.klib */ = {isa = PBXFileReference; lastKnownFileType = file; path = core.klib; sourceTree = "<group>"; };
+		B6F4212C2BC42F450005D0D0 /* cstubs.bc */ = {isa = PBXFileReference; lastKnownFileType = file; path = cstubs.bc; sourceTree = "<group>"; };
+		B6F4212E2BC42F450005D0D0 /* manifest.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = manifest.properties; sourceTree = "<group>"; };
+		B6F421302BC42F450005D0D0 /* cstubs.bc */ = {isa = PBXFileReference; lastKnownFileType = file; path = cstubs.bc; sourceTree = "<group>"; };
+		B6F421322BC42F450005D0D0 /* manifest.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = manifest.properties; sourceTree = "<group>"; };
+		B6F421342BC42F450005D0D0 /* core-cinterop-powersync-sqlite-core.klib */ = {isa = PBXFileReference; lastKnownFileType = file; path = "core-cinterop-powersync-sqlite-core.klib"; sourceTree = "<group>"; };
+		B6F421352BC42F450005D0D0 /* core-cinterop-sqlite.klib */ = {isa = PBXFileReference; lastKnownFileType = file; path = "core-cinterop-sqlite.klib"; sourceTree = "<group>"; };
+		B6F421372BC42F450005D0D0 /* core.klib */ = {isa = PBXFileReference; lastKnownFileType = file; path = core.klib; sourceTree = "<group>"; };
+		B6F4213D2BC42F5B0005D0D0 /* sqlite3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = sqlite3.c; path = "../powersync-kotlin/core/build/interop/sqlite/sqlite3.c"; sourceTree = "<group>"; };
+		B6F421402BC430B60005D0D0 /* sqlite3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sqlite3.h; path = "../powersync-kotlin/core/build/interop/sqlite/sqlite3.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +106,8 @@
 				6A9669002B9EE4FE00B05DCF /* PostgREST in Frameworks */,
 				6ABD78762B9F2CFB00558A41 /* SwiftUINavigationCore in Frameworks */,
 				6AC6A3062BA18313006CE8D9 /* powersync-sqlite-core.xcframework in Frameworks */,
+				B67712722C240A1300BFA931 /* PowerSync in Frameworks */,
 				6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */,
-				6AC6A3112BA19942006CE8D9 /* powersyncswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +117,7 @@
 		6A73157B2B9854220004CB17 = {
 			isa = PBXGroup;
 			children = (
+				B67712702C2404E300BFA931 /* powersync-kotlin */,
 				6A7315862B9854220004CB17 /* PowerSyncExample */,
 				6A7315852B9854220004CB17 /* Products */,
 				6A7315B52B9857AD0004CB17 /* Frameworks */,
@@ -140,6 +165,9 @@
 		6A7315B52B9857AD0004CB17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6F421402BC430B60005D0D0 /* sqlite3.h */,
+				B6F4213D2BC42F5B0005D0D0 /* sqlite3.c */,
+				B6F4213C2BC42F450005D0D0 /* classes */,
 				6AC6A3052BA18313006CE8D9 /* powersync-sqlite-core.xcframework */,
 			);
 			name = Frameworks;
@@ -152,6 +180,235 @@
 				6A4AD3842B9EE763005CBFD4 /* SupabaseConnector.swift */,
 			);
 			path = Supabase;
+			sourceTree = "<group>";
+		};
+		B6F4210F2BC42F450005D0D0 /* natives */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4210E2BC42F450005D0D0 /* cstubs.bc */,
+			);
+			path = natives;
+			sourceTree = "<group>";
+		};
+		B6F421112BC42F450005D0D0 /* core-cinterop-powersync-sqlite-core.klib-build */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4210F2BC42F450005D0D0 /* natives */,
+				B6F421102BC42F450005D0D0 /* manifest.properties */,
+			);
+			path = "core-cinterop-powersync-sqlite-core.klib-build";
+			sourceTree = "<group>";
+		};
+		B6F421132BC42F450005D0D0 /* natives */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421122BC42F450005D0D0 /* cstubs.bc */,
+			);
+			path = natives;
+			sourceTree = "<group>";
+		};
+		B6F421152BC42F450005D0D0 /* core-cinterop-sqlite.klib-build */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421132BC42F450005D0D0 /* natives */,
+				B6F421142BC42F450005D0D0 /* manifest.properties */,
+			);
+			path = "core-cinterop-sqlite.klib-build";
+			sourceTree = "<group>";
+		};
+		B6F421182BC42F450005D0D0 /* cinterop */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421112BC42F450005D0D0 /* core-cinterop-powersync-sqlite-core.klib-build */,
+				B6F421152BC42F450005D0D0 /* core-cinterop-sqlite.klib-build */,
+				B6F421162BC42F450005D0D0 /* core-cinterop-powersync-sqlite-core.klib */,
+				B6F421172BC42F450005D0D0 /* core-cinterop-sqlite.klib */,
+			);
+			path = cinterop;
+			sourceTree = "<group>";
+		};
+		B6F4211A2BC42F450005D0D0 /* klib */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421192BC42F450005D0D0 /* core.klib */,
+			);
+			path = klib;
+			sourceTree = "<group>";
+		};
+		B6F4211B2BC42F450005D0D0 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421182BC42F450005D0D0 /* cinterop */,
+				B6F4211A2BC42F450005D0D0 /* klib */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		B6F4211C2BC42F450005D0D0 /* iosArm64 */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4211B2BC42F450005D0D0 /* main */,
+			);
+			path = iosArm64;
+			sourceTree = "<group>";
+		};
+		B6F4211E2BC42F450005D0D0 /* natives */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4211D2BC42F450005D0D0 /* cstubs.bc */,
+			);
+			path = natives;
+			sourceTree = "<group>";
+		};
+		B6F421202BC42F450005D0D0 /* core-cinterop-powersync-sqlite-core.klib-build */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4211E2BC42F450005D0D0 /* natives */,
+				B6F4211F2BC42F450005D0D0 /* manifest.properties */,
+			);
+			path = "core-cinterop-powersync-sqlite-core.klib-build";
+			sourceTree = "<group>";
+		};
+		B6F421222BC42F450005D0D0 /* natives */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421212BC42F450005D0D0 /* cstubs.bc */,
+			);
+			path = natives;
+			sourceTree = "<group>";
+		};
+		B6F421242BC42F450005D0D0 /* core-cinterop-sqlite.klib-build */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421222BC42F450005D0D0 /* natives */,
+				B6F421232BC42F450005D0D0 /* manifest.properties */,
+			);
+			path = "core-cinterop-sqlite.klib-build";
+			sourceTree = "<group>";
+		};
+		B6F421272BC42F450005D0D0 /* cinterop */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421202BC42F450005D0D0 /* core-cinterop-powersync-sqlite-core.klib-build */,
+				B6F421242BC42F450005D0D0 /* core-cinterop-sqlite.klib-build */,
+				B6F421252BC42F450005D0D0 /* core-cinterop-powersync-sqlite-core.klib */,
+				B6F421262BC42F450005D0D0 /* core-cinterop-sqlite.klib */,
+			);
+			path = cinterop;
+			sourceTree = "<group>";
+		};
+		B6F421292BC42F450005D0D0 /* klib */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421282BC42F450005D0D0 /* core.klib */,
+			);
+			path = klib;
+			sourceTree = "<group>";
+		};
+		B6F4212A2BC42F450005D0D0 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421272BC42F450005D0D0 /* cinterop */,
+				B6F421292BC42F450005D0D0 /* klib */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		B6F4212B2BC42F450005D0D0 /* iosSimulatorArm64 */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4212A2BC42F450005D0D0 /* main */,
+			);
+			path = iosSimulatorArm64;
+			sourceTree = "<group>";
+		};
+		B6F4212D2BC42F450005D0D0 /* natives */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4212C2BC42F450005D0D0 /* cstubs.bc */,
+			);
+			path = natives;
+			sourceTree = "<group>";
+		};
+		B6F4212F2BC42F450005D0D0 /* core-cinterop-powersync-sqlite-core.klib-build */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4212D2BC42F450005D0D0 /* natives */,
+				B6F4212E2BC42F450005D0D0 /* manifest.properties */,
+			);
+			path = "core-cinterop-powersync-sqlite-core.klib-build";
+			sourceTree = "<group>";
+		};
+		B6F421312BC42F450005D0D0 /* natives */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421302BC42F450005D0D0 /* cstubs.bc */,
+			);
+			path = natives;
+			sourceTree = "<group>";
+		};
+		B6F421332BC42F450005D0D0 /* core-cinterop-sqlite.klib-build */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421312BC42F450005D0D0 /* natives */,
+				B6F421322BC42F450005D0D0 /* manifest.properties */,
+			);
+			path = "core-cinterop-sqlite.klib-build";
+			sourceTree = "<group>";
+		};
+		B6F421362BC42F450005D0D0 /* cinterop */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4212F2BC42F450005D0D0 /* core-cinterop-powersync-sqlite-core.klib-build */,
+				B6F421332BC42F450005D0D0 /* core-cinterop-sqlite.klib-build */,
+				B6F421342BC42F450005D0D0 /* core-cinterop-powersync-sqlite-core.klib */,
+				B6F421352BC42F450005D0D0 /* core-cinterop-sqlite.klib */,
+			);
+			path = cinterop;
+			sourceTree = "<group>";
+		};
+		B6F421382BC42F450005D0D0 /* klib */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421372BC42F450005D0D0 /* core.klib */,
+			);
+			path = klib;
+			sourceTree = "<group>";
+		};
+		B6F421392BC42F450005D0D0 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421362BC42F450005D0D0 /* cinterop */,
+				B6F421382BC42F450005D0D0 /* klib */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		B6F4213A2BC42F450005D0D0 /* iosX64 */ = {
+			isa = PBXGroup;
+			children = (
+				B6F421392BC42F450005D0D0 /* main */,
+			);
+			path = iosX64;
+			sourceTree = "<group>";
+		};
+		B6F4213B2BC42F450005D0D0 /* kotlin */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4211C2BC42F450005D0D0 /* iosArm64 */,
+				B6F4212B2BC42F450005D0D0 /* iosSimulatorArm64 */,
+				B6F4213A2BC42F450005D0D0 /* iosX64 */,
+			);
+			path = kotlin;
+			sourceTree = "<group>";
+		};
+		B6F4213C2BC42F450005D0D0 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4213B2BC42F450005D0D0 /* kotlin */,
+			);
+			name = classes;
+			path = "../powersync-kotlin/core/build/classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +436,7 @@
 				6ABD78702B9F2CD400558A41 /* IdentifiedCollections */,
 				6ABD78732B9F2CFB00558A41 /* SwiftUINavigation */,
 				6ABD78752B9F2CFB00558A41 /* SwiftUINavigationCore */,
-				6AC6A3102BA19942006CE8D9 /* powersyncswift */,
+				B67712712C240A1300BFA931 /* PowerSync */,
 			);
 			productName = PowerSyncExample;
 			productReference = 6A7315842B9854220004CB17 /* PowerSyncExample.app */;
@@ -319,6 +576,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lsqlite3";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -375,6 +633,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-lsqlite3";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -384,12 +643,13 @@
 		6A7315932B9854240004CB17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLY_RULES_IN_COPY_HEADERS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PowerSyncExample/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6WA62GTJNA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -402,7 +662,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "-lsqlite3";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.powersync.PowerSyncExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -414,12 +674,13 @@
 		6A7315942B9854240004CB17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLY_RULES_IN_COPY_HEADERS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PowerSyncExample/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6WA62GTJNA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -432,7 +693,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "-lsqlite3";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.powersync.PowerSyncExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -502,7 +763,7 @@
 			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin.git";
 			requirement = {
 				kind = exactVersion;
-				version = "0.0.1-ALPHA10.0";
+				version = "0.0.1-ALPHA13.0";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -543,10 +804,9 @@
 			package = 6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
 			productName = SwiftUINavigationCore;
 		};
-		6AC6A3102BA19942006CE8D9 /* powersyncswift */ = {
+		B67712712C240A1300BFA931 /* PowerSync */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6AC6A30F2BA19942006CE8D9 /* XCRemoteSwiftPackageReference "powersync-kotlin" */;
-			productName = powersyncswift;
+			productName = PowerSync;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
