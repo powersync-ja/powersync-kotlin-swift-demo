@@ -24,12 +24,24 @@ class SupabaseConnector: PowerSyncBackendConnector {
             }
         }
     }
-    
+
+    var currentUserID: String {
+        guard let id = session?.user.id else {
+            preconditionFailure("Required session.")
+        }
+
+        return id.uuidString
+    }
+
     override func fetchCredentials() async throws -> PowerSyncCredentials? {
-        if((self.session == nil)){
+        if (self.session == nil) {
             throw AuthError.sessionNotFound
         }
-        return PowerSyncCredentials(endpoint: self.powerSyncEndpoint, token: session!.accessToken, userId: currentUserID)
+
+        let token = session!.accessToken
+
+        // userId is for debugging purposes only
+        return PowerSyncCredentials(endpoint: self.powerSyncEndpoint, token: token, userId: currentUserID)
     }
     
     override func uploadData(database: any PowerSyncDatabase) async throws {
