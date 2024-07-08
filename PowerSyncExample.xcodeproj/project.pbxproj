@@ -30,9 +30,8 @@
 		6ABD787C2B9F2E6700558A41 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787B2B9F2E6700558A41 /* Debug.swift */; };
 		6ABD787E2B9F2E8700558A41 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787D2B9F2E8700558A41 /* Constants.swift */; };
 		6ABD78802B9F2F1300558A41 /* AddTodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */; };
-		6AC6A3062BA18313006CE8D9 /* powersync-sqlite-core.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC6A3052BA18313006CE8D9 /* powersync-sqlite-core.xcframework */; };
-		6AC6A3072BA18313006CE8D9 /* powersync-sqlite-core.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC6A3052BA18313006CE8D9 /* powersync-sqlite-core.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B67712722C240A1300BFA931 /* PowerSync in Frameworks */ = {isa = PBXBuildFile; productRef = B67712712C240A1300BFA931 /* PowerSync */; };
+		B6C77B982C253C9B0082993E /* PowerSync in Frameworks */ = {isa = PBXBuildFile; productRef = B6C77B972C253C9B0082993E /* PowerSync */; };
+		BD51A7EE25913C8BC8773347 /* Pods_PowerSyncExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD2B4628A3E02C0428D058C /* Pods_PowerSyncExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,7 +41,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6AC6A3072BA18313006CE8D9 /* powersync-sqlite-core.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +48,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14B25A4E5C92F258ADCF4F59 /* Pods-PowerSyncExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerSyncExample.release.xcconfig"; path = "Target Support Files/Pods-PowerSyncExample/Pods-PowerSyncExample.release.xcconfig"; sourceTree = "<group>"; };
+		23423475D5EF090FBC543BC3 /* Pods-PowerSyncExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerSyncExample.debug.xcconfig"; path = "Target Support Files/Pods-PowerSyncExample/Pods-PowerSyncExample.debug.xcconfig"; sourceTree = "<group>"; };
 		6A4AD3842B9EE763005CBFD4 /* SupabaseConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseConnector.swift; sourceTree = "<group>"; };
 		6A4AD3882B9EEB21005CBFD4 /* _Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Secrets.swift; sourceTree = "<group>"; };
 		6A4AD38F2B9EF775005CBFD4 /* ErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
@@ -67,8 +67,8 @@
 		6ABD787B2B9F2E6700558A41 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		6ABD787D2B9F2E8700558A41 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoListView.swift; sourceTree = "<group>"; };
-		6AC6A3052BA18313006CE8D9 /* powersync-sqlite-core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "powersync-sqlite-core.xcframework"; sourceTree = "<group>"; };
-		B67712702C2404E300BFA931 /* powersync-kotlin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "powersync-kotlin"; path = "../powersync-kotlin"; sourceTree = "<group>"; };
+		7DD2B4628A3E02C0428D058C /* Pods_PowerSyncExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PowerSyncExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B691C5DD2C3BF99A0022D566 /* powersync-kotlin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "powersync-kotlin"; path = "../powersync-kotlin"; sourceTree = "<group>"; };
 		B6F4210E2BC42F450005D0D0 /* cstubs.bc */ = {isa = PBXFileReference; lastKnownFileType = file; path = cstubs.bc; sourceTree = "<group>"; };
 		B6F421102BC42F450005D0D0 /* manifest.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = manifest.properties; sourceTree = "<group>"; };
 		B6F421122BC42F450005D0D0 /* cstubs.bc */ = {isa = PBXFileReference; lastKnownFileType = file; path = cstubs.bc; sourceTree = "<group>"; };
@@ -102,12 +102,12 @@
 				6ABD786E2B9F2C7B00558A41 /* Collections in Frameworks */,
 				6ABD78712B9F2CD400558A41 /* IdentifiedCollections in Frameworks */,
 				6ABD78742B9F2CFB00558A41 /* SwiftUINavigation in Frameworks */,
+				B6C77B982C253C9B0082993E /* PowerSync in Frameworks */,
 				6A9669022B9EE69500B05DCF /* Supabase in Frameworks */,
 				6A9669002B9EE4FE00B05DCF /* PostgREST in Frameworks */,
 				6ABD78762B9F2CFB00558A41 /* SwiftUINavigationCore in Frameworks */,
-				6AC6A3062BA18313006CE8D9 /* powersync-sqlite-core.xcframework in Frameworks */,
-				B67712722C240A1300BFA931 /* PowerSync in Frameworks */,
 				6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */,
+				BD51A7EE25913C8BC8773347 /* Pods_PowerSyncExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,10 +117,11 @@
 		6A73157B2B9854220004CB17 = {
 			isa = PBXGroup;
 			children = (
-				B67712702C2404E300BFA931 /* powersync-kotlin */,
+				B691C5DD2C3BF99A0022D566 /* powersync-kotlin */,
 				6A7315862B9854220004CB17 /* PowerSyncExample */,
 				6A7315852B9854220004CB17 /* Products */,
 				6A7315B52B9857AD0004CB17 /* Frameworks */,
+				AE7193DCE091DC4BD17BE54E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,7 +169,7 @@
 				B6F421402BC430B60005D0D0 /* sqlite3.h */,
 				B6F4213D2BC42F5B0005D0D0 /* sqlite3.c */,
 				B6F4213C2BC42F450005D0D0 /* classes */,
-				6AC6A3052BA18313006CE8D9 /* powersync-sqlite-core.xcframework */,
+				7DD2B4628A3E02C0428D058C /* Pods_PowerSyncExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,6 +181,15 @@
 				6A4AD3842B9EE763005CBFD4 /* SupabaseConnector.swift */,
 			);
 			path = Supabase;
+			sourceTree = "<group>";
+		};
+		AE7193DCE091DC4BD17BE54E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23423475D5EF090FBC543BC3 /* Pods-PowerSyncExample.debug.xcconfig */,
+				14B25A4E5C92F258ADCF4F59 /* Pods-PowerSyncExample.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		B6F4210F2BC42F450005D0D0 /* natives */ = {
@@ -418,10 +428,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A7315922B9854240004CB17 /* Build configuration list for PBXNativeTarget "PowerSyncExample" */;
 			buildPhases = (
+				9942F11048E6CC354C3710EF /* [CP] Check Pods Manifest.lock */,
 				6A7315802B9854220004CB17 /* Sources */,
 				6A7315812B9854220004CB17 /* Frameworks */,
 				6A7315822B9854220004CB17 /* Resources */,
 				6AC6A3082BA18313006CE8D9 /* Embed Frameworks */,
+				AF4287A1C8CB08DCAB64AC07 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -436,7 +448,7 @@
 				6ABD78702B9F2CD400558A41 /* IdentifiedCollections */,
 				6ABD78732B9F2CFB00558A41 /* SwiftUINavigation */,
 				6ABD78752B9F2CFB00558A41 /* SwiftUINavigationCore */,
-				B67712712C240A1300BFA931 /* PowerSync */,
+				B6C77B972C253C9B0082993E /* PowerSync */,
 			);
 			productName = PowerSyncExample;
 			productReference = 6A7315842B9854220004CB17 /* PowerSyncExample.app */;
@@ -454,6 +466,7 @@
 				TargetAttributes = {
 					6A7315832B9854220004CB17 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -471,7 +484,7 @@
 				6ABD786C2B9F2C7B00558A41 /* XCRemoteSwiftPackageReference "swift-collections" */,
 				6ABD786F2B9F2CD400558A41 /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
 				6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
-				6AC6A30F2BA19942006CE8D9 /* XCRemoteSwiftPackageReference "powersync-kotlin" */,
+				B6C77B962C253C9B0082993E /* XCRemoteSwiftPackageReference "powersync-kotlin" */,
 			);
 			productRefGroup = 6A7315852B9854220004CB17 /* Products */;
 			projectDirPath = "";
@@ -493,6 +506,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9942F11048E6CC354C3710EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PowerSyncExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF4287A1C8CB08DCAB64AC07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PowerSyncExample/Pods-PowerSyncExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PowerSyncExample/Pods-PowerSyncExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PowerSyncExample/Pods-PowerSyncExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A7315802B9854220004CB17 /* Sources */ = {
@@ -642,15 +697,18 @@
 		};
 		6A7315932B9854240004CB17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23423475D5EF090FBC543BC3 /* Pods-PowerSyncExample.debug.xcconfig */;
 			buildSettings = {
 				APPLY_RULES_IN_COPY_HEADERS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PowerSyncExample/Preview Content\"";
 				DEVELOPMENT_TEAM = 6WA62GTJNA;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -662,10 +720,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.powersync.PowerSyncExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PowerSyncExample/PowerSyncExample-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -673,15 +735,18 @@
 		};
 		6A7315942B9854240004CB17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14B25A4E5C92F258ADCF4F59 /* Pods-PowerSyncExample.release.xcconfig */;
 			buildSettings = {
 				APPLY_RULES_IN_COPY_HEADERS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PowerSyncExample/Preview Content\"";
 				DEVELOPMENT_TEAM = 6WA62GTJNA;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -693,10 +758,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.powersync.PowerSyncExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PowerSyncExample/PowerSyncExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -758,12 +824,12 @@
 				minimumVersion = 1.2.1;
 			};
 		};
-		6AC6A30F2BA19942006CE8D9 /* XCRemoteSwiftPackageReference "powersync-kotlin" */ = {
+		B6C77B962C253C9B0082993E /* XCRemoteSwiftPackageReference "powersync-kotlin" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin.git";
+			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin";
 			requirement = {
 				kind = exactVersion;
-				version = "0.0.1-ALPHA13.0";
+				version = "0.0.1-ALPHA14.2";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -804,8 +870,9 @@
 			package = 6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
 			productName = SwiftUINavigationCore;
 		};
-		B67712712C240A1300BFA931 /* PowerSync */ = {
+		B6C77B972C253C9B0082993E /* PowerSync */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = B6C77B962C253C9B0082993E /* XCRemoteSwiftPackageReference "powersync-kotlin" */;
 			productName = PowerSync;
 		};
 /* End XCSwiftPackageProductDependency section */
