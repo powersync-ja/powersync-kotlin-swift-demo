@@ -3,7 +3,7 @@ import SwiftUI
 
 struct RootView: View {
   @Environment(PowerSync.self) var powerSync
-
+    
   var body: some View {
     NavigationStack {
         if powerSync.connector.session == nil {
@@ -17,6 +17,6 @@ struct RootView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    RootView()
+    RootView().environment(PowerSync())
   }
 }

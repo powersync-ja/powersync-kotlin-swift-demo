@@ -1,6 +1,4 @@
 import SwiftUI
-import PowerSync
-import Supabase
 
 @main
 struct PowerSyncExampleApp: App {

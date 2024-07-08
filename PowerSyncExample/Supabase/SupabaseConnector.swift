@@ -25,30 +25,14 @@ class SupabaseConnector: PowerSyncBackendConnector {
         }
     }
     
-    var currentUserID: String {
-        guard let id = session?.user.id else {
-            preconditionFailure("Required session.")
-        }
-        
-        return id.uuidString
-    }
-    
-    var sessionExpiresAt: Kotlinx_datetimeInstant {
-        guard let expireAt = session?.expiresAt else {
-            preconditionFailure("Required session.")
-        }
-        
-        return Kotlinx_datetimeInstant.companion.fromEpochMilliseconds(epochMilliseconds: Int64(expireAt))
-    }
-    
-    override func __fetchCredentials() async throws -> PowerSyncCredentials? {
+    override func fetchCredentials() async throws -> PowerSyncCredentials? {
         if((self.session == nil)){
             throw AuthError.sessionNotFound
         }
         return PowerSyncCredentials(endpoint: self.powerSyncEndpoint, token: session!.accessToken, userId: currentUserID)
     }
     
-    override func __uploadData(database: any PowerSyncDatabase) async throws {
+    override func uploadData(database: any PowerSyncDatabase) async throws {
         
         guard let transaction = try await database.getNextCrudTransaction() else { return }
         

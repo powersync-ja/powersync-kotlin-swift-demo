@@ -12,7 +12,7 @@ class PowerSync {
     var db: PowerSyncDatabase!
     
     func connect() async {
-        db = PowerSyncBuilderCompanion().from(factory: factory, schema: schema).build()
+        db = PowerSyncDatabase(factory: factory, schema: schema)
         
         do {
             try await db.connect(connector: connector,crudThrottleMs: 100,retryDelayMs:100)
@@ -82,3 +82,4 @@ private class SuspendTaskWrapper: KotlinSuspendFunction1 {
         }
     }
 }
+
