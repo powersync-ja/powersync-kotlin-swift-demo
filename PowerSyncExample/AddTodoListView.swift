@@ -4,7 +4,7 @@ struct AddTodoListView: View {
     @Environment(PowerSync.self) var powerSync
     @Binding var newTodo: NewTodo
     let completion: (Result<Bool, Error>) -> Void
-    
+
     var body: some View {
         Section {
             TextField("Description", text: $newTodo.description)

@@ -38,47 +38,54 @@ class PowerSync {
     }
 
     func insertTodo(_ todo: NewTodo) async throws {
-        let _ = try await self.db.execute(sql: "INSERT INTO todos (id, description, completed) VALUES (uuid(), ?, ?)", parameters: [todo.description, todo.isComplete])
+        try await self.db.execute(
+            sql: "INSERT INTO todos (id, description, completed) VALUES (uuid(), ?, ?)",
+            parameters: [todo.description, todo.isComplete]
+        )
     }
 
     func updateTodo(_ todo: Todo) async throws {
-        let _ = try await self.db.execute(sql: "UPDATE todos SET description = ?, completed = ? WHERE id = ?", parameters: [todo.description, todo.isComplete, todo.id])
+        try await self.db.execute(
+            sql: "UPDATE todos SET description = ?, completed = ? WHERE id = ?",
+            parameters: [todo.description, todo.isComplete, todo.id]
+        )
     }
 
     func deleteTodo(id: String) async throws {
-        let _ = try await self.db.execute(sql: "DELETE FROM todos WHERE id = ?", parameters: [id])
-    }
-
-    func writeTransaction(_ queryHandle: @escaping SuspendHandle) async throws -> Any? {
-        return try await self.db.writeTransaction(body: SuspendTaskWrapper {
-            return Task {
-                return try await queryHandle()
-            }
+        try await db.writeTransaction(body: SuspendTaskWrapper {
+            try await self.db.execute(
+                sql: "DELETE FROM todos WHERE id = ?",
+                parameters: [id]
+            )
+            return
         })
     }
 
-    func readTransaction(_ queryHandle: @escaping SuspendHandle) async throws -> Any? {
-        return try await self.db.readTransaction(body: SuspendTaskWrapper {
-            return Task {
-                return try await queryHandle()
-            }
-        })
+    func writeTransaction(_ queryHandle: @escaping () async throws -> Any) async throws -> Any? {
+        try await db.writeTransaction(body: SuspendTaskWrapper(queryHandle))
+    }
+
+    func readTransaction(_ queryHandle: @escaping () async throws -> Any) async throws -> Any? {
+        try await db.readTransaction(body: SuspendTaskWrapper(queryHandle))
     }
 }
 
-
 private class SuspendTaskWrapper: KotlinSuspendFunction1 {
-    let handle: () throws -> Any?
-    init(_ handle: @escaping () throws -> Any?){
+    let handle: () async throws -> Any
+
+    init(_ handle: @escaping () async throws -> Any) {
         self.handle = handle
     }
 
-    func __invoke(p1: Any?, completionHandler: @escaping (Any?, Error?) -> Void) {
-        do {
-            let res = try self.handle()
-            completionHandler(res, nil)
-        } catch {
-            completionHandler(nil, error)
+    @MainActor
+    func invoke(p1: Any?, completionHandler: @escaping (Any?, Error?) -> Void) {
+        Task {
+            do {
+                let result = try await self.handle()
+                completionHandler(result, nil)
+            } catch {
+                completionHandler(nil, error)
+            }
         }
     }
 }
