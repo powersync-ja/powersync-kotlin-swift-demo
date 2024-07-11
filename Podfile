@@ -6,5 +6,5 @@ target 'PowerSyncExample' do
   use_frameworks!
 
   # Pods for PowerSyncExample
-  pod 'powersync-sqlite-core', '~> 0.1.6'
+  pod 'powersync-sqlite-core', '~> 0.1.7'
 end
