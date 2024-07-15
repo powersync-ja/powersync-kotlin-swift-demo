@@ -64,7 +64,7 @@ struct TodoListView: View {
         }
         .task {
             await powerSync.connect()
-            let watchTask = Task {
+            Task {
                 await powerSync.watchTodos { tds in
                     todos = IdentifiedArrayOf(uniqueElements: tds)
                 }
@@ -100,7 +100,7 @@ struct TodoListView: View {
 struct TodoListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            TodoListView()
+            TodoListView().environment(PowerSync())
         }
     }
 }

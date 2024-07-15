@@ -3,86 +3,85 @@ import SwiftUI
 import Supabase
 import PowerSync
 
-
 @Observable
+@MainActor
 class SupabaseConnector: PowerSyncBackendConnector {
     let powerSyncEndpoint: String = Secrets.powerSyncEndpoint
     let client: SupabaseClient = SupabaseClient(supabaseURL: Secrets.supabaseURL, supabaseKey: Secrets.supabaseAnonKey)
     var session: Session?
-    
+
     @ObservationIgnored
-    private var observeAuthStateChangesTask: Task<Void, Never>?
-    
+    private var observeAuthStateChangesTask: Task<Void, Error>?
+
     override init() {
         super.init()
-        
-        observeAuthStateChangesTask = Task {
-            for await (event, session) in await self.client.auth.authStateChanges {
-                guard [.initialSession, .signedIn, .signedOut].contains(event) else { return }
-                
+
+        observeAuthStateChangesTask = Task { [weak self] in
+            guard let self = self else { return }
+
+            for await (event, session) in self.client.auth.authStateChanges {
+                guard [.initialSession, .signedIn, .signedOut].contains(event) else { throw AuthError.sessionNotFound }
+
                 self.session = session
             }
         }
     }
-    
+
     var currentUserID: String {
         guard let id = session?.user.id else {
             preconditionFailure("Required session.")
         }
-        
+
         return id.uuidString
     }
-    
-    var sessionExpiresAt: Kotlinx_datetimeInstant {
-        guard let expireAt = session?.expiresAt else {
-            preconditionFailure("Required session.")
-        }
-        
-        return Kotlinx_datetimeInstant.companion.fromEpochMilliseconds(epochMilliseconds: Int64(expireAt))
-    }
-    
-    override func __fetchCredentials() async throws -> PowerSyncCredentials? {
-        if((self.session == nil)){
+
+    override func fetchCredentials() async throws -> PowerSyncCredentials? {
+        session = try await client.auth.session
+
+        if (self.session == nil) {
             throw AuthError.sessionNotFound
         }
-        return PowerSyncCredentials(endpoint: self.powerSyncEndpoint, token: session!.accessToken, userId: currentUserID)
+
+        let token = session!.accessToken
+
+        // userId is for debugging purposes only
+        return PowerSyncCredentials(endpoint: self.powerSyncEndpoint, token: token, userId: currentUserID)
     }
-    
-    override func __uploadData(database: any PowerSyncDatabase) async throws {
-        
+
+    override func uploadData(database: any PowerSyncDatabase) async throws {
+
         guard let transaction = try await database.getNextCrudTransaction() else { return }
-        
-        var lastEntry: CrudEntry? = nil
+
+        var lastEntry: CrudEntry?
         do {
             for entry in transaction.crud {
                 lastEntry = entry
                 let tableName = entry.table
-                
-                let table = await client.database.from(tableName)
-                
+
+                let table = client.from(tableName)
+
                 switch entry.op {
                 case .put:
                     var data = entry.opData ?? [String: String]()
                     data["id"] = entry.id
-                    let _ = try await table.upsert(data).execute();
+                    try await table.upsert(data).execute();
                 case .patch:
                     guard let opData = entry.opData else { continue }
-                    let _ = try await table.update(opData).eq("id", value: entry.id).execute()
-                    
+                    try await table.update(opData).eq("id", value: entry.id).execute()
+
                 case .delete:
-                    let _ = try await table.delete().eq( "id", value: entry.id).execute()
+                    try await table.delete().eq( "id", value: entry.id).execute()
                 }
             }
-            
-            let _ = try await transaction.complete.invoke(p1: nil)
-            
+
+            try await transaction.complete.invoke(p1: nil)
+
         } catch {
             print("Data upload error - retrying last entry: \(lastEntry!), \(error)")
             throw error
         }
     }
-    
-    
+
     deinit {
         observeAuthStateChangesTask?.cancel()
     }
