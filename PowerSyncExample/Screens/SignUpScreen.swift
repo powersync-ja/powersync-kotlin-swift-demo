@@ -49,7 +49,7 @@ struct SignUpScreen: View {
                 case .result(.success):
                     Text("Sign up successful!")
             }
-        }.navigationBarBackButtonHidden(true)
+        }
     }
 
 
