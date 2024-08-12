@@ -32,7 +32,7 @@ class SupabaseConnector: PowerSyncBackendConnector {
             preconditionFailure("Required session.")
         }
 
-        return id.uuidString
+        return id.uuidString.lowercased()
     }
 
     override func fetchCredentials() async throws -> PowerSyncCredentials? {

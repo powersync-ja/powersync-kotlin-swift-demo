@@ -1,15 +1,15 @@
-import IdentifiedCollections
 import SwiftUI
+import IdentifiedCollections
 import SwiftUINavigation
 
 struct TodoListView: View {
-    @Environment(PowerSync.self) var powerSync
+    @Environment(PowerSync.self) private var powerSync
+    let listId: String
     
-    @State var todos: IdentifiedArrayOf<Todo> = []
-    @State var error: Error?
-    
-    @State var newTodo: NewTodo?
-    @State var editing: Bool = false
+    @State private var todos: IdentifiedArrayOf<Todo> = []
+    @State private var error: Error?
+    @State private var newTodo: NewTodo?
+    @State private var editing: Bool = false
     
     var body: some View {
         List {
@@ -18,7 +18,7 @@ struct TodoListView: View {
             }
             
             IfLet($newTodo) { $newTodo in
-                AddTodoListView(newTodo: $newTodo) { result in
+                AddTodoListView(newTodo: $newTodo, listId: listId) { result in
                     withAnimation {
                         self.newTodo = nil
                     }
@@ -46,8 +46,9 @@ struct TodoListView: View {
                     Button {
                         withAnimation {
                             newTodo = .init(
-                                description: "",
-                                isComplete: false
+                                listId: listId,
+                                isComplete: false,
+                                description: ""
                             )
                         }
                     } label: {
@@ -63,16 +64,14 @@ struct TodoListView: View {
             }
         }
         .task {
-            await powerSync.connect()
             Task {
-                await powerSync.watchTodos { tds in
+                await powerSync.watchTodos(listId) { tds in
                     todos = IdentifiedArrayOf(uniqueElements: tds)
                 }
             }
         }
     }
     
-    @MainActor
     func toggleCompletion(of todo: Todo) async {
         var updatedTodo = todo
         updatedTodo.isComplete.toggle()
@@ -97,10 +96,11 @@ struct TodoListView: View {
     }
 }
 
-struct TodoListView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            TodoListView().environment(PowerSync())
-        }
+#Preview {
+    NavigationStack {
+        TodoListView(
+            listId: UUID().uuidString.lowercased()
+        ).environment(PowerSync())
     }
 }
+

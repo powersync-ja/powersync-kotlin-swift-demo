@@ -2,21 +2,38 @@ import Auth
 import SwiftUI
 
 struct RootView: View {
-  @Environment(PowerSync.self) var powerSync
-    
-  var body: some View {
-    NavigationStack {
-        if powerSync.connector.session == nil {
-        AuthWithEmailAndPassword()
-      } else {
-        HomeView()
-      }
+    @Environment(PowerSync.self) var powerSync
+
+    @State private var authModel = AuthModel()
+    @State private var navigationModel = NavigationModel()
+
+    var body: some View {
+        NavigationStack(path: $navigationModel.path) {
+            Group {
+                if authModel.isAuthenticated {
+                    HomeScreen()
+                } else {
+                    SignInScreen()
+                }
+            }
+            .navigationDestination(for: Route.self) { route in
+                switch route {
+                    case .home:
+                        HomeScreen()
+                    case .signIn:
+                        SignInScreen()
+                    case .signUp:
+                        SignUpScreen()
+                    }
+            }
+        }
+        .environment(authModel)
+        .environment(navigationModel)
     }
-  }
+
 }
 
-struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    RootView().environment(PowerSync())
-  }
+#Preview {
+    RootView()
+        .environment(PowerSync())
 }
