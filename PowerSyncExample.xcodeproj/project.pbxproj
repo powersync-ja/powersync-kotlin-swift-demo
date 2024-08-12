@@ -231,6 +231,15 @@
 			path = PowerSync;
 			sourceTree = "<group>";
 		};
+		AE7193DCE091DC4BD17BE54E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23423475D5EF090FBC543BC3 /* Pods-PowerSyncExample.debug.xcconfig */,
+				14B25A4E5C92F258ADCF4F59 /* Pods-PowerSyncExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B6F4210F2BC42F450005D0D0 /* natives */ = {
 			isa = PBXGroup;
 			children = (

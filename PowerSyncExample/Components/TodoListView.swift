@@ -5,18 +5,18 @@ import SwiftUINavigation
 struct TodoListView: View {
     @Environment(PowerSync.self) private var powerSync
     let listId: String
-    
+
     @State private var todos: IdentifiedArrayOf<Todo> = []
     @State private var error: Error?
     @State private var newTodo: NewTodo?
     @State private var editing: Bool = false
-    
+
     var body: some View {
         List {
             if let error {
                 ErrorText(error)
             }
-            
+
             IfLet($newTodo) { $newTodo in
                 AddTodoListView(newTodo: $newTodo, listId: listId) { result in
                     withAnimation {
@@ -24,7 +24,7 @@ struct TodoListView: View {
                     }
                 }
             }
-            
+
             ForEach(todos) { todo in
                 TodoListRow(todo: todo) {
                     Task {
@@ -71,7 +71,7 @@ struct TodoListView: View {
             }
         }
     }
-    
+
     func toggleCompletion(of todo: Todo) async {
         var updatedTodo = todo
         updatedTodo.isComplete.toggle()
@@ -82,14 +82,14 @@ struct TodoListView: View {
             self.error = error
         }
     }
-    
+
     func delete(at offset: IndexSet) async {
         do {
             error = nil
             let todosToDelete = offset.map { todos[$0] }
-            
+
             try await powerSync.deleteTodo(id: todosToDelete[0].id)
-            
+
         } catch {
             self.error = error
         }
@@ -103,4 +103,3 @@ struct TodoListView: View {
         ).environment(PowerSync())
     }
 }
-

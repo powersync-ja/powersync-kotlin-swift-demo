@@ -7,7 +7,7 @@ struct AddTodoListView: View {
     @Binding var newTodo: NewTodo
     let listId: String
     let completion: (Result<Bool, Error>) -> Void
-    
+
     var body: some View {
         Section {
             TextField("Description", text: $newTodo.description)
