@@ -17,19 +17,27 @@
 		6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9668FD2B9EE4FE00B05DCF /* Auth */; };
 		6A9669002B9EE4FE00B05DCF /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9668FF2B9EE4FE00B05DCF /* PostgREST */; };
 		6A9669022B9EE69500B05DCF /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9669012B9EE69500B05DCF /* Supabase */; };
-		6A9669042B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9669032B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift */; };
+		6A9669042B9EE6FA00B05DCF /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9669032B9EE6FA00B05DCF /* SignInScreen.swift */; };
 		6ABD78672B9F2B4800558A41 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD78662B9F2B4800558A41 /* RootView.swift */; };
-		6ABD78692B9F2BB500558A41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD78682B9F2BB500558A41 /* HomeView.swift */; };
 		6ABD786B2B9F2C1500558A41 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD786A2B9F2C1500558A41 /* TodoListView.swift */; };
-		6ABD786E2B9F2C7B00558A41 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 6ABD786D2B9F2C7B00558A41 /* Collections */; };
-		6ABD78712B9F2CD400558A41 /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 6ABD78702B9F2CD400558A41 /* IdentifiedCollections */; };
-		6ABD78742B9F2CFB00558A41 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 6ABD78732B9F2CFB00558A41 /* SwiftUINavigation */; };
-		6ABD78762B9F2CFB00558A41 /* SwiftUINavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6ABD78752B9F2CFB00558A41 /* SwiftUINavigationCore */; };
 		6ABD78782B9F2D2800558A41 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD78772B9F2D2800558A41 /* Schema.swift */; };
 		6ABD787A2B9F2D8300558A41 /* TodoListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD78792B9F2D8300558A41 /* TodoListRow.swift */; };
 		6ABD787C2B9F2E6700558A41 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787B2B9F2E6700558A41 /* Debug.swift */; };
-		6ABD787E2B9F2E8700558A41 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787D2B9F2E8700558A41 /* Constants.swift */; };
-		6ABD78802B9F2F1300558A41 /* AddTodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */; };
+		6ABD78802B9F2F1300558A41 /* AddListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD787F2B9F2F1300558A41 /* AddListView.swift */; };
+		B65C4D6D2C60D38B00176007 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65C4D6C2C60D38B00176007 /* HomeScreen.swift */; };
+		B65C4D712C60D7D800176007 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65C4D702C60D7D800176007 /* SignUpScreen.swift */; };
+		B65C4D732C60D7EB00176007 /* TodosScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65C4D722C60D7EB00176007 /* TodosScreen.swift */; };
+		B666585B2C620C3900159A81 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666585A2C620C3900159A81 /* Constants.swift */; };
+		B666585D2C620E9E00159A81 /* WifiIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666585C2C620E9E00159A81 /* WifiIcon.swift */; };
+		B666585F2C62115300159A81 /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B666585E2C62115300159A81 /* ListRow.swift */; };
+		B66658612C62179E00159A81 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66658602C62179E00159A81 /* ListView.swift */; };
+		B66658632C621CA700159A81 /* AddTodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66658622C621CA700159A81 /* AddTodoListView.swift */; };
+		B66658652C62314B00159A81 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66658642C62314B00159A81 /* Lists.swift */; };
+		B66658672C62315400159A81 /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66658662C62315400159A81 /* Todos.swift */; };
+		B66658772C63B7BB00159A81 /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = B66658762C63B7BB00159A81 /* IdentifiedCollections */; };
+		B666587A2C63B88700159A81 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = B66658792C63B88700159A81 /* SwiftUINavigation */; };
+		B666587C2C63B88700159A81 /* SwiftUINavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = B666587B2C63B88700159A81 /* SwiftUINavigationCore */; };
+		B6B3698A2C64F4B30033C307 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B369892C64F4B30033C307 /* Navigation.swift */; };
 		B6C77B982C253C9B0082993E /* PowerSync in Frameworks */ = {isa = PBXBuildFile; productRef = B6C77B972C253C9B0082993E /* PowerSync */; };
 		BD51A7EE25913C8BC8773347 /* Pods_PowerSyncExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD2B4628A3E02C0428D058C /* Pods_PowerSyncExample.framework */; };
 /* End PBXBuildFile section */
@@ -58,17 +66,25 @@
 		6A73158B2B9854240004CB17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A73158E2B9854240004CB17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6A7315BA2B98BDD30004CB17 /* PowerSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSync.swift; sourceTree = "<group>"; };
-		6A9669032B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWithEmailAndPassword.swift; sourceTree = "<group>"; };
+		6A9669032B9EE6FA00B05DCF /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 		6ABD78662B9F2B4800558A41 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		6ABD78682B9F2BB500558A41 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6ABD786A2B9F2C1500558A41 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		6ABD78772B9F2D2800558A41 /* Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schema.swift; sourceTree = "<group>"; };
 		6ABD78792B9F2D8300558A41 /* TodoListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRow.swift; sourceTree = "<group>"; };
 		6ABD787B2B9F2E6700558A41 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
-		6ABD787D2B9F2E8700558A41 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoListView.swift; sourceTree = "<group>"; };
+		6ABD787F2B9F2F1300558A41 /* AddListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListView.swift; sourceTree = "<group>"; };
 		7DD2B4628A3E02C0428D058C /* Pods_PowerSyncExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PowerSyncExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B691C5DD2C3BF99A0022D566 /* powersync-kotlin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "powersync-kotlin"; path = "../powersync-kotlin"; sourceTree = "<group>"; };
+		B65C4D6C2C60D38B00176007 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		B65C4D702C60D7D800176007 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		B65C4D722C60D7EB00176007 /* TodosScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosScreen.swift; sourceTree = "<group>"; };
+		B666585A2C620C3900159A81 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B666585C2C620E9E00159A81 /* WifiIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiIcon.swift; sourceTree = "<group>"; };
+		B666585E2C62115300159A81 /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
+		B66658602C62179E00159A81 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		B66658622C621CA700159A81 /* AddTodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoListView.swift; sourceTree = "<group>"; };
+		B66658642C62314B00159A81 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
+		B66658662C62315400159A81 /* Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todos.swift; sourceTree = "<group>"; };
+		B6B369892C64F4B30033C307 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		B6F4210E2BC42F450005D0D0 /* cstubs.bc */ = {isa = PBXFileReference; lastKnownFileType = file; path = cstubs.bc; sourceTree = "<group>"; };
 		B6F421102BC42F450005D0D0 /* manifest.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = manifest.properties; sourceTree = "<group>"; };
 		B6F421122BC42F450005D0D0 /* cstubs.bc */ = {isa = PBXFileReference; lastKnownFileType = file; path = cstubs.bc; sourceTree = "<group>"; };
@@ -99,14 +115,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6ABD786E2B9F2C7B00558A41 /* Collections in Frameworks */,
-				6ABD78712B9F2CD400558A41 /* IdentifiedCollections in Frameworks */,
-				6ABD78742B9F2CFB00558A41 /* SwiftUINavigation in Frameworks */,
+				B66658772C63B7BB00159A81 /* IdentifiedCollections in Frameworks */,
+				B666587C2C63B88700159A81 /* SwiftUINavigationCore in Frameworks */,
 				B6C77B982C253C9B0082993E /* PowerSync in Frameworks */,
 				6A9669022B9EE69500B05DCF /* Supabase in Frameworks */,
 				6A9669002B9EE4FE00B05DCF /* PostgREST in Frameworks */,
-				6ABD78762B9F2CFB00558A41 /* SwiftUINavigationCore in Frameworks */,
 				6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */,
+				B666587A2C63B88700159A81 /* SwiftUINavigation in Frameworks */,
 				BD51A7EE25913C8BC8773347 /* Pods_PowerSyncExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,7 +132,6 @@
 		6A73157B2B9854220004CB17 = {
 			isa = PBXGroup;
 			children = (
-				B691C5DD2C3BF99A0022D566 /* powersync-kotlin */,
 				6A7315862B9854220004CB17 /* PowerSyncExample */,
 				6A7315852B9854220004CB17 /* Products */,
 				6A7315B52B9857AD0004CB17 /* Frameworks */,
@@ -136,21 +150,18 @@
 		6A7315862B9854220004CB17 /* PowerSyncExample */ = {
 			isa = PBXGroup;
 			children = (
+				B65C4D6F2C60D58500176007 /* PowerSync */,
+				B65C4D6E2C60D52E00176007 /* Components */,
+				B65C4D6B2C60D36700176007 /* Screens */,
 				6A4AD3882B9EEB21005CBFD4 /* _Secrets.swift */,
-				6ABD787F2B9F2F1300558A41 /* AddTodoListView.swift */,
 				6A73158B2B9854240004CB17 /* Assets.xcassets */,
-				6ABD787D2B9F2E8700558A41 /* Constants.swift */,
 				6ABD787B2B9F2E6700558A41 /* Debug.swift */,
+				B666585A2C620C3900159A81 /* Constants.swift */,
+				B6B369892C64F4B30033C307 /* Navigation.swift */,
 				6A4AD38F2B9EF775005CBFD4 /* ErrorText.swift */,
-				6ABD78682B9F2BB500558A41 /* HomeView.swift */,
-				6A7315BA2B98BDD30004CB17 /* PowerSync.swift */,
 				6A7315872B9854220004CB17 /* PowerSyncExampleApp.swift */,
 				6A73158D2B9854240004CB17 /* Preview Content */,
 				6ABD78662B9F2B4800558A41 /* RootView.swift */,
-				6ABD78772B9F2D2800558A41 /* Schema.swift */,
-				6A9669052B9EE71700B05DCF /* Supabase */,
-				6ABD78792B9F2D8300558A41 /* TodoListRow.swift */,
-				6ABD786A2B9F2C1500558A41 /* TodoListView.swift */,
 			);
 			path = PowerSyncExample;
 			sourceTree = "<group>";
@@ -174,13 +185,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6A9669052B9EE71700B05DCF /* Supabase */ = {
+		AE7193DCE091DC4BD17BE54E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6A9669032B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift */,
-				6A4AD3842B9EE763005CBFD4 /* SupabaseConnector.swift */,
+				23423475D5EF090FBC543BC3 /* Pods-PowerSyncExample.debug.xcconfig */,
+				14B25A4E5C92F258ADCF4F59 /* Pods-PowerSyncExample.release.xcconfig */,
 			);
-			path = Supabase;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B65C4D6B2C60D36700176007 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				6A9669032B9EE6FA00B05DCF /* SignInScreen.swift */,
+				B65C4D6C2C60D38B00176007 /* HomeScreen.swift */,
+				B65C4D702C60D7D800176007 /* SignUpScreen.swift */,
+				B65C4D722C60D7EB00176007 /* TodosScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B65C4D6E2C60D52E00176007 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6ABD78792B9F2D8300558A41 /* TodoListRow.swift */,
+				6ABD786A2B9F2C1500558A41 /* TodoListView.swift */,
+				B66658622C621CA700159A81 /* AddTodoListView.swift */,
+				B666585C2C620E9E00159A81 /* WifiIcon.swift */,
+				B666585E2C62115300159A81 /* ListRow.swift */,
+				B66658602C62179E00159A81 /* ListView.swift */,
+				6ABD787F2B9F2F1300558A41 /* AddListView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B65C4D6F2C60D58500176007 /* PowerSync */ = {
+			isa = PBXGroup;
+			children = (
+				6A7315BA2B98BDD30004CB17 /* PowerSync.swift */,
+				6A4AD3842B9EE763005CBFD4 /* SupabaseConnector.swift */,
+				6ABD78772B9F2D2800558A41 /* Schema.swift */,
+				B66658642C62314B00159A81 /* Lists.swift */,
+				B66658662C62315400159A81 /* Todos.swift */,
+			);
+			path = PowerSync;
 			sourceTree = "<group>";
 		};
 		AE7193DCE091DC4BD17BE54E /* Pods */ = {
@@ -444,11 +492,10 @@
 				6A9668FD2B9EE4FE00B05DCF /* Auth */,
 				6A9668FF2B9EE4FE00B05DCF /* PostgREST */,
 				6A9669012B9EE69500B05DCF /* Supabase */,
-				6ABD786D2B9F2C7B00558A41 /* Collections */,
-				6ABD78702B9F2CD400558A41 /* IdentifiedCollections */,
-				6ABD78732B9F2CFB00558A41 /* SwiftUINavigation */,
-				6ABD78752B9F2CFB00558A41 /* SwiftUINavigationCore */,
 				B6C77B972C253C9B0082993E /* PowerSync */,
+				B66658762C63B7BB00159A81 /* IdentifiedCollections */,
+				B66658792C63B88700159A81 /* SwiftUINavigation */,
+				B666587B2C63B88700159A81 /* SwiftUINavigationCore */,
 			);
 			productName = PowerSyncExample;
 			productReference = 6A7315842B9854220004CB17 /* PowerSyncExample.app */;
@@ -481,10 +528,9 @@
 			mainGroup = 6A73157B2B9854220004CB17;
 			packageReferences = (
 				6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */,
-				6ABD786C2B9F2C7B00558A41 /* XCRemoteSwiftPackageReference "swift-collections" */,
-				6ABD786F2B9F2CD400558A41 /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
-				6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
 				B6C77B962C253C9B0082993E /* XCRemoteSwiftPackageReference "powersync-kotlin" */,
+				B66658752C63B7BB00159A81 /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
+				B66658782C63B88700159A81 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
 			);
 			productRefGroup = 6A7315852B9854220004CB17 /* Products */;
 			projectDirPath = "";
@@ -555,18 +601,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ABD787C2B9F2E6700558A41 /* Debug.swift in Sources */,
-				6ABD78802B9F2F1300558A41 /* AddTodoListView.swift in Sources */,
+				B666585B2C620C3900159A81 /* Constants.swift in Sources */,
+				6ABD78802B9F2F1300558A41 /* AddListView.swift in Sources */,
 				6A4AD3892B9EEB21005CBFD4 /* _Secrets.swift in Sources */,
+				B65C4D712C60D7D800176007 /* SignUpScreen.swift in Sources */,
+				B6B3698A2C64F4B30033C307 /* Navigation.swift in Sources */,
 				6ABD786B2B9F2C1500558A41 /* TodoListView.swift in Sources */,
 				6A4AD3852B9EE763005CBFD4 /* SupabaseConnector.swift in Sources */,
+				B65C4D732C60D7EB00176007 /* TodosScreen.swift in Sources */,
 				6ABD787A2B9F2D8300558A41 /* TodoListRow.swift in Sources */,
+				B66658652C62314B00159A81 /* Lists.swift in Sources */,
 				6A4AD3902B9EF775005CBFD4 /* ErrorText.swift in Sources */,
-				6ABD787E2B9F2E8700558A41 /* Constants.swift in Sources */,
+				B66658672C62315400159A81 /* Todos.swift in Sources */,
 				6ABD78672B9F2B4800558A41 /* RootView.swift in Sources */,
-				6ABD78692B9F2BB500558A41 /* HomeView.swift in Sources */,
+				B66658612C62179E00159A81 /* ListView.swift in Sources */,
 				6ABD78782B9F2D2800558A41 /* Schema.swift in Sources */,
+				B65C4D6D2C60D38B00176007 /* HomeScreen.swift in Sources */,
 				6A7315882B9854220004CB17 /* PowerSyncExampleApp.swift in Sources */,
-				6A9669042B9EE6FA00B05DCF /* AuthWithEmailAndPassword.swift in Sources */,
+				B666585F2C62115300159A81 /* ListRow.swift in Sources */,
+				B66658632C621CA700159A81 /* AddTodoListView.swift in Sources */,
+				B666585D2C620E9E00159A81 /* WifiIcon.swift in Sources */,
+				6A9669042B9EE6FA00B05DCF /* SignInScreen.swift in Sources */,
 				6A7315BB2B98BDD30004CB17 /* PowerSync.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -800,28 +855,20 @@
 				minimumVersion = 2.4.0;
 			};
 		};
-		6ABD786C2B9F2C7B00558A41 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+		B66658752C63B7BB00159A81 /* XCRemoteSwiftPackageReference "swift-identified-collections" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-collections.git";
+			repositoryURL = "https://github.com/pointfreeco/swift-identified-collections";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.1.0;
 			};
 		};
-		6ABD786F2B9F2CD400558A41 /* XCRemoteSwiftPackageReference "swift-identified-collections" */ = {
+		B66658782C63B88700159A81 /* XCRemoteSwiftPackageReference "swiftui-navigation" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-identified-collections.git";
+			repositoryURL = "https://github.com/pointfreeco/swiftui-navigation";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swiftui-navigation.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.1;
+				minimumVersion = 1.5.4;
 			};
 		};
 		B6C77B962C253C9B0082993E /* XCRemoteSwiftPackageReference "powersync-kotlin" */ = {
@@ -829,7 +876,7 @@
 			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin";
 			requirement = {
 				kind = exactVersion;
-				version = "0.0.1-ALPHA14.2";
+				version = "0.0.1-ALPHA15.0";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -850,24 +897,19 @@
 			package = 6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
 		};
-		6ABD786D2B9F2C7B00558A41 /* Collections */ = {
+		B66658762C63B7BB00159A81 /* IdentifiedCollections */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6ABD786C2B9F2C7B00558A41 /* XCRemoteSwiftPackageReference "swift-collections" */;
-			productName = Collections;
-		};
-		6ABD78702B9F2CD400558A41 /* IdentifiedCollections */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6ABD786F2B9F2CD400558A41 /* XCRemoteSwiftPackageReference "swift-identified-collections" */;
+			package = B66658752C63B7BB00159A81 /* XCRemoteSwiftPackageReference "swift-identified-collections" */;
 			productName = IdentifiedCollections;
 		};
-		6ABD78732B9F2CFB00558A41 /* SwiftUINavigation */ = {
+		B66658792C63B88700159A81 /* SwiftUINavigation */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			package = B66658782C63B88700159A81 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
 			productName = SwiftUINavigation;
 		};
-		6ABD78752B9F2CFB00558A41 /* SwiftUINavigationCore */ = {
+		B666587B2C63B88700159A81 /* SwiftUINavigationCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6ABD78722B9F2CFB00558A41 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			package = B66658782C63B88700159A81 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
 			productName = SwiftUINavigationCore;
 		};
 		B6C77B972C253C9B0082993E /* PowerSync */ = {

@@ -1,8 +1,11 @@
+import Foundation
 import SwiftUI
 
 struct AddTodoListView: View {
-    @Environment(PowerSync.self) var powerSync
+    @Environment(PowerSync.self) private var powerSync
+    
     @Binding var newTodo: NewTodo
+    let listId: String
     let completion: (Result<Bool, Error>) -> Void
 
     var body: some View {
@@ -11,10 +14,11 @@ struct AddTodoListView: View {
             Button("Save") {
                 Task.detached {
                     do {
-                        try await powerSync.insertTodo(newTodo)
+                        try await powerSync.insertTodo(newTodo, listId)
                         completion(.success(true))
                     } catch {
                         completion(.failure(error))
+                        throw error
                     }
                 }
             }
@@ -22,16 +26,16 @@ struct AddTodoListView: View {
     }
 }
 
-struct AddTodoListView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddTodoListView(
-            newTodo: .constant(
-                .init(
-                    description: "",
-                    isComplete: false
-                )
+#Preview {
+    AddTodoListView(
+        newTodo: .constant(
+            .init(
+                listId: UUID().uuidString.lowercased(),
+                isComplete: false,
+                description: ""
             )
-        ) { _ in
-        }
-    }
+        ),
+        listId: UUID().uuidString.lowercased()
+    ){ _ in
+    }.environment(PowerSync())
 }

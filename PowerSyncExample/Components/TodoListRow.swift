@@ -18,14 +18,19 @@ struct TodoListRow: View {
   }
 }
 
-struct TodoListRow_Previews: PreviewProvider {
-  static var previews: some View {
+
+#Preview {
     TodoListRow(
       todo: .init(
         id: UUID().uuidString.lowercased(),
+        listId: UUID().uuidString.lowercased(),
+        photoId: nil,
         description: "description",
-        isComplete: false
+        isComplete: false,
+        createdAt: "",
+        completedAt: nil,
+        createdBy: UUID().uuidString.lowercased(),
+        completedBy: nil
       )
     ) {}
-  }
 }

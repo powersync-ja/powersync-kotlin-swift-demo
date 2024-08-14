@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "Supabase",
+        "package": "supabase-swift",
         "repositoryURL": "https://github.com/supabase-community/supabase-swift.git",
         "state": {
           "branch": null,
-          "revision": "4641dc711d39b77b0e44bc806be0d6ab33bba22a",
-          "version": "2.13.9"
+          "revision": "42a22357c290992d1b548dc153c23fc96bf12ff9",
+          "version": "2.15.3"
         }
       },
       {
@@ -15,17 +15,17 @@
         "repositoryURL": "https://github.com/pointfreeco/swift-case-paths",
         "state": {
           "branch": null,
-          "revision": "b871e5ed11a23e52c2896a92ce2c829982ff8619",
-          "version": "1.4.2"
+          "revision": "71344dd930fde41e8f3adafe260adcbb2fc2a3dc",
+          "version": "1.5.4"
         }
       },
       {
         "package": "swift-collections",
-        "repositoryURL": "https://github.com/apple/swift-collections.git",
+        "repositoryURL": "https://github.com/apple/swift-collections",
         "state": {
           "branch": null,
-          "revision": "ee97538f5b81ae89698fd95938896dec5217b148",
-          "version": "1.1.1"
+          "revision": "3d2dc41a01f9e49d84f0a3925fb858bed64f702d",
+          "version": "1.1.2"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/apple/swift-crypto.git",
         "state": {
           "branch": null,
-          "revision": "46072478ca365fe48370993833cb22de9b41567f",
-          "version": "3.5.2"
+          "revision": "8dafe0fdce623f65178689f2d6dea7304f7fbe75",
+          "version": "3.6.0"
         }
       },
       {
@@ -51,13 +51,13 @@
         "repositoryURL": "https://github.com/pointfreeco/swift-custom-dump",
         "state": {
           "branch": null,
-          "revision": "f01efb26f3a192a0e88dcdb7c3c391ec2fc25d9c",
-          "version": "1.3.0"
+          "revision": "82645ec760917961cfa08c9c0c7104a57a0fa4b1",
+          "version": "1.3.3"
         }
       },
       {
         "package": "swift-identified-collections",
-        "repositoryURL": "https://github.com/pointfreeco/swift-identified-collections.git",
+        "repositoryURL": "https://github.com/pointfreeco/swift-identified-collections",
         "state": {
           "branch": null,
           "revision": "2f5ab6e091dd032b63dacbda052405756010dc3b",
@@ -66,20 +66,20 @@
       },
       {
         "package": "swift-syntax",
-        "repositoryURL": "https://github.com/apple/swift-syntax",
+        "repositoryURL": "https://github.com/swiftlang/swift-syntax",
         "state": {
           "branch": null,
-          "revision": "303e5c5c36d6a558407d364878df131c3546fad8",
-          "version": "510.0.2"
+          "revision": "06b5cdc432e93b60e3bdf53aff2857c6b312991a",
+          "version": "600.0.0-prerelease-2024-07-30"
         }
       },
       {
         "package": "swiftui-navigation",
-        "repositoryURL": "https://github.com/pointfreeco/swiftui-navigation.git",
+        "repositoryURL": "https://github.com/pointfreeco/swiftui-navigation",
         "state": {
           "branch": null,
-          "revision": "b7c9a79f6f6b1fefb87d3e5a83a9c2fe7cdc9720",
-          "version": "1.5.0"
+          "revision": "fc91d591ebba1f90d65028ccb65c861e5979e898",
+          "version": "1.5.4"
         }
       },
       {
@@ -87,8 +87,8 @@
         "repositoryURL": "https://github.com/pointfreeco/xctest-dynamic-overlay",
         "state": {
           "branch": null,
-          "revision": "6f30bdba373bbd7fbfe241dddd732651f2fbd1e2",
-          "version": "1.1.2"
+          "revision": "357ca1e5dd31f613a1d43320870ebc219386a495",
+          "version": "1.2.2"
         }
       }
     ]
