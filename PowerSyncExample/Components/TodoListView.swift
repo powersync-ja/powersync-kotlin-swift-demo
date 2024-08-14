@@ -66,7 +66,9 @@ struct TodoListView: View {
         .task {
             Task {
                 await powerSync.watchTodos(listId) { tds in
-                    todos = IdentifiedArrayOf(uniqueElements: tds)
+                    withAnimation {
+                        self.todos = IdentifiedArrayOf(uniqueElements: tds)
+                    }
                 }
             }
         }

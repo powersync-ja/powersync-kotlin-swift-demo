@@ -21,8 +21,11 @@ struct HomeScreen: View {
                 }
               }
             }
-          }.task {
-              await powerSync.connect()
+          }
+          .task {
+              if(powerSync.db.currentStatus.connected == false) {
+                  await powerSync.connect()
+              }
           }
           .navigationBarBackButtonHidden(true)
         }

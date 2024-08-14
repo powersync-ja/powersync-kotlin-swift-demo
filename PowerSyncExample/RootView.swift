@@ -27,6 +27,11 @@ struct RootView: View {
                     }
             }
         }
+        .task {
+            if(powerSync.db == nil) {
+                powerSync.openDb()
+            }
+        }
         .environment(authModel)
         .environment(navigationModel)
     }

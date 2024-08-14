@@ -10,12 +10,15 @@ class PowerSync {
     let connector = SupabaseConnector()
     let schema = AppSchema
     var db: PowerSyncDatabase!
-    
+
+    func openDb() {
+        db = PowerSyncDatabase(factory: factory, schema: schema, dbFilename: "powersync-swift.sqlite")
+    }
+
+    // openDb must be called before connect
     func connect() async {
-        db = PowerSyncDatabase(factory: factory, schema: schema)
-        
         do {
-            try await db.connect(connector: connector,crudThrottleMs: 100,retryDelayMs:100)
+            try await db.connect(connector: connector,crudThrottleMs: 1000,retryDelayMs:5000)
         } catch {
             print("Unexpected error: \(error.localizedDescription)") // Catches any other error
         }
@@ -28,7 +31,7 @@ class PowerSync {
             return error.localizedDescription
         }
     }
-    
+
     func signOut() async throws -> Void {
         try await db.disconnectAndClear(clearLocal: true)
         try await connector.client.auth.signOut()
@@ -41,9 +44,9 @@ class PowerSync {
     func readTransaction(_ queryHandle: @escaping () async throws -> Any) async throws -> Any? {
         try await db.readTransaction(body: SuspendTaskWrapper(queryHandle))
     }
-    
+
     func watchLists(_ cb: @escaping (_ lists: [ListContent]) -> Void ) async {
-        for await todos in self.db.watch(
+        for await lists in self.db.watch(
             sql: "SELECT * FROM \(LISTS_TABLE)",
             parameters: [],
             mapper: { cursor in
@@ -55,7 +58,7 @@ class PowerSync {
                 )
             }
         ) {
-            cb(todos as! [ListContent])
+            cb(lists as! [ListContent])
         }
     }
 

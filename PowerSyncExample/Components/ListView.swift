@@ -4,18 +4,18 @@ import SwiftUINavigation
 
 struct ListView: View {
     @Environment(PowerSync.self) private var powerSync
-    
+
     @State private var lists: IdentifiedArrayOf<ListContent> = []
     @State private var error: Error?
     @State private var newList: NewListContent?
     @State private var editing: Bool = false
-    
+
     var body: some View {
         List {
             if let error {
                 ErrorText(error)
             }
-        
+
             IfLet($newList) { $newList in
                 AddListView(newList: $newList) { result in
                     withAnimation {
@@ -23,7 +23,7 @@ struct ListView: View {
                     }
                 }
             }
-            
+
             ForEach(lists) { list in
                 NavigationLink(destination: TodosScreen(
                     listId: list.id
@@ -65,19 +65,21 @@ struct ListView: View {
         .task {
             Task {
                 await powerSync.watchLists { ls in
-                    lists = IdentifiedArrayOf(uniqueElements: ls)
+                    withAnimation {
+                        self.lists = IdentifiedArrayOf(uniqueElements: ls)
+                    }
                 }
             }
         }
     }
-        
+
     func handleDelete(at offset: IndexSet) async {
         do {
             error = nil
             let listsToDelete = offset.map { lists[$0] }
-            
+
             try await powerSync.deleteList(id: listsToDelete[0].id)
-            
+
         } catch {
             self.error = error
         }
