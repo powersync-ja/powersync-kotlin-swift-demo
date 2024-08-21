@@ -7,7 +7,7 @@ A simple Swift app using the PowerSync Swift SDK. Built with KMMBridge + SKIE an
 ## Features
 
 - Using PowerSync Kotlin-Swift SDK to perform `read`, `insert`, `update`, and `watch` queries
-- Integrates with Supabase via `SupabaseConnector` and email-and-password `auth` 
+- Integrates with Supabase via `SupabaseConnector` and email-and-password `auth`
 
 ## Set up Supabase Project
 
@@ -51,9 +51,9 @@ bucket_definitions:
 
 ## Configure The App
 
-Open the project in XCode. 
+Open the project in XCode.
 
-Open the “_Secrets” file and fill in the placeholder values. 
+Open the “_Secrets” file and fill in the placeholder values.
 
 You can find the Supabase values under "Project Settings" -> "API" in your Supabase dashboard — under the "URL" section, and anon key under "Project API keys".
 
@@ -97,7 +97,9 @@ rm -rf ~/Library/Caches/org.swift.swiftpm
 rm -rf ~/Library/org.swift.swiftpm
 ```
 
-2. In Xcode:
+2. Run `pod install` from root
+
+3. In Xcode:
 - Reset Packages: File -> Packages -> Reset Package Caches
 - Clean Build: Product -> Clean Build Folder.
 
