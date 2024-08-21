@@ -97,7 +97,7 @@ rm -rf ~/Library/Caches/org.swift.swiftpm
 rm -rf ~/Library/org.swift.swiftpm
 ```
 
-2. Run `pod install` from root
+2. Run `pod install` in the project root
 
 3. In Xcode:
 - Reset Packages: File -> Packages -> Reset Package Caches
