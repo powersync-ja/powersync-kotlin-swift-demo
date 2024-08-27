@@ -14,9 +14,6 @@
 		6A73158C2B9854240004CB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A73158B2B9854240004CB17 /* Assets.xcassets */; };
 		6A73158F2B9854240004CB17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A73158E2B9854240004CB17 /* Preview Assets.xcassets */; };
 		6A7315BB2B98BDD30004CB17 /* PowerSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7315BA2B98BDD30004CB17 /* PowerSync.swift */; };
-		6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9668FD2B9EE4FE00B05DCF /* Auth */; };
-		6A9669002B9EE4FE00B05DCF /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9668FF2B9EE4FE00B05DCF /* PostgREST */; };
-		6A9669022B9EE69500B05DCF /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6A9669012B9EE69500B05DCF /* Supabase */; };
 		6A9669042B9EE6FA00B05DCF /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9669032B9EE6FA00B05DCF /* SignInScreen.swift */; };
 		6ABD78672B9F2B4800558A41 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD78662B9F2B4800558A41 /* RootView.swift */; };
 		6ABD786B2B9F2C1500558A41 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD786A2B9F2C1500558A41 /* TodoListView.swift */; };
@@ -34,11 +31,11 @@
 		B66658632C621CA700159A81 /* AddTodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66658622C621CA700159A81 /* AddTodoListView.swift */; };
 		B66658652C62314B00159A81 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66658642C62314B00159A81 /* Lists.swift */; };
 		B66658672C62315400159A81 /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66658662C62315400159A81 /* Todos.swift */; };
-		B66658772C63B7BB00159A81 /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = B66658762C63B7BB00159A81 /* IdentifiedCollections */; };
-		B666587A2C63B88700159A81 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = B66658792C63B88700159A81 /* SwiftUINavigation */; };
-		B666587C2C63B88700159A81 /* SwiftUINavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = B666587B2C63B88700159A81 /* SwiftUINavigationCore */; };
 		B6B3698A2C64F4B30033C307 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B369892C64F4B30033C307 /* Navigation.swift */; };
-		B6C77B982C253C9B0082993E /* PowerSync in Frameworks */ = {isa = PBXBuildFile; productRef = B6C77B972C253C9B0082993E /* PowerSync */; };
+		B6C634DC2C7C9C0F00D44E72 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = B6C634DB2C7C9C0F00D44E72 /* SwiftUINavigation */; };
+		B6C634DE2C7C9C0F00D44E72 /* SwiftUINavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = B6C634DD2C7C9C0F00D44E72 /* SwiftUINavigationCore */; };
+		B6C634E12C7C9C2100D44E72 /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = B6C634E02C7C9C2100D44E72 /* IdentifiedCollections */; };
+		B6C634F02C7CC9CE00D44E72 /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = B6C634EF2C7CC9CE00D44E72 /* AnyCodable */; };
 		BD51A7EE25913C8BC8773347 /* Pods_PowerSyncExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD2B4628A3E02C0428D058C /* Pods_PowerSyncExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,14 +112,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B66658772C63B7BB00159A81 /* IdentifiedCollections in Frameworks */,
-				B666587C2C63B88700159A81 /* SwiftUINavigationCore in Frameworks */,
-				B6C77B982C253C9B0082993E /* PowerSync in Frameworks */,
-				6A9669022B9EE69500B05DCF /* Supabase in Frameworks */,
-				6A9669002B9EE4FE00B05DCF /* PostgREST in Frameworks */,
-				6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */,
-				B666587A2C63B88700159A81 /* SwiftUINavigation in Frameworks */,
+				B6C634DC2C7C9C0F00D44E72 /* SwiftUINavigation in Frameworks */,
+				B6C634E12C7C9C2100D44E72 /* IdentifiedCollections in Frameworks */,
+				B6C634DE2C7C9C0F00D44E72 /* SwiftUINavigationCore in Frameworks */,
 				BD51A7EE25913C8BC8773347 /* Pods_PowerSyncExample.framework in Frameworks */,
+				B6C634F02C7CC9CE00D44E72 /* AnyCodable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,15 +223,6 @@
 				B66658662C62315400159A81 /* Todos.swift */,
 			);
 			path = PowerSync;
-			sourceTree = "<group>";
-		};
-		AE7193DCE091DC4BD17BE54E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				23423475D5EF090FBC543BC3 /* Pods-PowerSyncExample.debug.xcconfig */,
-				14B25A4E5C92F258ADCF4F59 /* Pods-PowerSyncExample.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		B6F4210F2BC42F450005D0D0 /* natives */ = {
@@ -486,16 +471,18 @@
 			buildRules = (
 			);
 			dependencies = (
+				B6C634F42C7CCC2C00D44E72 /* PBXTargetDependency */,
+				B6C634F22C7CCC2900D44E72 /* PBXTargetDependency */,
+				B6C634ED2C7CC5E400D44E72 /* PBXTargetDependency */,
+				B6C634EB2C7CC5D900D44E72 /* PBXTargetDependency */,
+				B6C634E72C7CC5BD00D44E72 /* PBXTargetDependency */,
 			);
 			name = PowerSyncExample;
 			packageProductDependencies = (
-				6A9668FD2B9EE4FE00B05DCF /* Auth */,
-				6A9668FF2B9EE4FE00B05DCF /* PostgREST */,
-				6A9669012B9EE69500B05DCF /* Supabase */,
-				B6C77B972C253C9B0082993E /* PowerSync */,
-				B66658762C63B7BB00159A81 /* IdentifiedCollections */,
-				B66658792C63B88700159A81 /* SwiftUINavigation */,
-				B666587B2C63B88700159A81 /* SwiftUINavigationCore */,
+				B6C634DB2C7C9C0F00D44E72 /* SwiftUINavigation */,
+				B6C634DD2C7C9C0F00D44E72 /* SwiftUINavigationCore */,
+				B6C634E02C7C9C2100D44E72 /* IdentifiedCollections */,
+				B6C634EF2C7CC9CE00D44E72 /* AnyCodable */,
 			);
 			productName = PowerSyncExample;
 			productReference = 6A7315842B9854220004CB17 /* PowerSyncExample.app */;
@@ -527,10 +514,11 @@
 			);
 			mainGroup = 6A73157B2B9854220004CB17;
 			packageReferences = (
-				6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */,
-				B6C77B962C253C9B0082993E /* XCRemoteSwiftPackageReference "powersync-kotlin" */,
-				B66658752C63B7BB00159A81 /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
-				B66658782C63B88700159A81 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
+				B6C634DA2C7C9C0F00D44E72 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
+				B6C634DF2C7C9C2100D44E72 /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
+				B6C634E32C7C9CE100D44E72 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				B6C634E52C7CC41200D44E72 /* XCRemoteSwiftPackageReference "powersync-kotlin" */,
+				B6C634EE2C7CC9CE00D44E72 /* XCRemoteSwiftPackageReference "AnyCodable" */,
 			);
 			productRefGroup = 6A7315852B9854220004CB17 /* Products */;
 			projectDirPath = "";
@@ -627,6 +615,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B6C634E72C7CC5BD00D44E72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B6C634E62C7CC5BD00D44E72 /* Supabase */;
+		};
+		B6C634EB2C7CC5D900D44E72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B6C634EA2C7CC5D900D44E72 /* PowerSync */;
+		};
+		B6C634ED2C7CC5E400D44E72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B6C634EC2C7CC5E400D44E72 /* IdentifiedCollections */;
+		};
+		B6C634F22C7CCC2900D44E72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B6C634F12C7CCC2900D44E72 /* PostgREST */;
+		};
+		B6C634F42C7CCC2C00D44E72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B6C634F32C7CCC2C00D44E72 /* Auth */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6A7315902B9854240004CB17 /* Debug */ = {
@@ -847,15 +858,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+		B6C634DA2C7C9C0F00D44E72 /* XCRemoteSwiftPackageReference "swiftui-navigation" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			repositoryURL = "https://github.com/pointfreeco/swiftui-navigation";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.0;
+				minimumVersion = 1.5.5;
 			};
 		};
-		B66658752C63B7BB00159A81 /* XCRemoteSwiftPackageReference "swift-identified-collections" */ = {
+		B6C634DF2C7C9C2100D44E72 /* XCRemoteSwiftPackageReference "swift-identified-collections" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-identified-collections";
 			requirement = {
@@ -863,59 +874,77 @@
 				minimumVersion = 1.1.0;
 			};
 		};
-		B66658782C63B88700159A81 /* XCRemoteSwiftPackageReference "swiftui-navigation" */ = {
+		B6C634E32C7C9CE100D44E72 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swiftui-navigation";
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.4;
+				minimumVersion = 2.5.1;
 			};
 		};
-		B6C77B962C253C9B0082993E /* XCRemoteSwiftPackageReference "powersync-kotlin" */ = {
+		B6C634E52C7CC41200D44E72 /* XCRemoteSwiftPackageReference "powersync-kotlin" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin";
 			requirement = {
 				kind = exactVersion;
-				version = "0.0.1-ALPHA15.0";
+				version = "0.0.1-ALPHA17.0";
+			};
+		};
+		B6C634EE2C7CC9CE00D44E72 /* XCRemoteSwiftPackageReference "AnyCodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flight-School/AnyCodable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6A9668FD2B9EE4FE00B05DCF /* Auth */ = {
+		B6C634DB2C7C9C0F00D44E72 /* SwiftUINavigation */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Auth;
-		};
-		6A9668FF2B9EE4FE00B05DCF /* PostgREST */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = PostgREST;
-		};
-		6A9669012B9EE69500B05DCF /* Supabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Supabase;
-		};
-		B66658762C63B7BB00159A81 /* IdentifiedCollections */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B66658752C63B7BB00159A81 /* XCRemoteSwiftPackageReference "swift-identified-collections" */;
-			productName = IdentifiedCollections;
-		};
-		B66658792C63B88700159A81 /* SwiftUINavigation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B66658782C63B88700159A81 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			package = B6C634DA2C7C9C0F00D44E72 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
 			productName = SwiftUINavigation;
 		};
-		B666587B2C63B88700159A81 /* SwiftUINavigationCore */ = {
+		B6C634DD2C7C9C0F00D44E72 /* SwiftUINavigationCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B66658782C63B88700159A81 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			package = B6C634DA2C7C9C0F00D44E72 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
 			productName = SwiftUINavigationCore;
 		};
-		B6C77B972C253C9B0082993E /* PowerSync */ = {
+		B6C634E02C7C9C2100D44E72 /* IdentifiedCollections */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B6C77B962C253C9B0082993E /* XCRemoteSwiftPackageReference "powersync-kotlin" */;
+			package = B6C634DF2C7C9C2100D44E72 /* XCRemoteSwiftPackageReference "swift-identified-collections" */;
+			productName = IdentifiedCollections;
+		};
+		B6C634E62C7CC5BD00D44E72 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6C634E32C7C9CE100D44E72 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		B6C634EA2C7CC5D900D44E72 /* PowerSync */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6C634E52C7CC41200D44E72 /* XCRemoteSwiftPackageReference "powersync-kotlin" */;
 			productName = PowerSync;
+		};
+		B6C634EC2C7CC5E400D44E72 /* IdentifiedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6C634DF2C7C9C2100D44E72 /* XCRemoteSwiftPackageReference "swift-identified-collections" */;
+			productName = IdentifiedCollections;
+		};
+		B6C634EF2C7CC9CE00D44E72 /* AnyCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6C634EE2C7CC9CE00D44E72 /* XCRemoteSwiftPackageReference "AnyCodable" */;
+			productName = AnyCodable;
+		};
+		B6C634F12C7CCC2900D44E72 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6C634E32C7C9CE100D44E72 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		B6C634F32C7CCC2C00D44E72 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6C634E32C7C9CE100D44E72 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
