@@ -38,15 +38,11 @@ class PowerSync {
     }
 
     func writeTransaction(_ queryHandle: @escaping () async throws -> Any) async throws -> Any? {
-        try await db.writeTransaction(callback: SuspendTaskWrapper(queryHandle)){_,_ in 
-        
-        }
+        try await db.writeTransaction(callback: SuspendTaskWrapper(queryHandle))
     }
 
     func readTransaction(_ queryHandle: @escaping () async throws -> Any) async throws -> Any? {
-        try await db.readTransaction(callback: SuspendTaskWrapper(queryHandle)) {_,_ in 
-            
-        }
+        try await db.readTransaction(callback: SuspendTaskWrapper(queryHandle))
     }
 
     func watchLists(_ cb: @escaping (_ lists: [ListContent]) -> Void ) async {
