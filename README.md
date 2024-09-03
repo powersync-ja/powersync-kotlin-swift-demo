@@ -77,6 +77,8 @@ rm -rf ~/Library/org.swift.swiftpm
 - Reset Packages: File -> Packages -> Reset Package Caches
 - Clean Build: Product -> Clean Build Folder.
 
+4. Enable CasePathMacros. We are using SwiftUI Navigation for the demo which requires this.
+
 ## Run project
 
 Build the project, launch the app and sign in with the test user you created in Supabase earlier.
