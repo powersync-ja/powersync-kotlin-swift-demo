@@ -37,6 +37,7 @@
 		B66658772C63B7BB00159A81 /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = B66658762C63B7BB00159A81 /* IdentifiedCollections */; };
 		B666587A2C63B88700159A81 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = B66658792C63B88700159A81 /* SwiftUINavigation */; };
 		B666587C2C63B88700159A81 /* SwiftUINavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = B666587B2C63B88700159A81 /* SwiftUINavigationCore */; };
+		B69F7D862C8EE27400565448 /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = B69F7D852C8EE27400565448 /* AnyCodable */; };
 		B6B3698A2C64F4B30033C307 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B369892C64F4B30033C307 /* Navigation.swift */; };
 		B6C77B982C253C9B0082993E /* PowerSync in Frameworks */ = {isa = PBXBuildFile; productRef = B6C77B972C253C9B0082993E /* PowerSync */; };
 		BD51A7EE25913C8BC8773347 /* Pods_PowerSyncExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD2B4628A3E02C0428D058C /* Pods_PowerSyncExample.framework */; };
@@ -116,6 +117,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66658772C63B7BB00159A81 /* IdentifiedCollections in Frameworks */,
+				B69F7D862C8EE27400565448 /* AnyCodable in Frameworks */,
 				B666587C2C63B88700159A81 /* SwiftUINavigationCore in Frameworks */,
 				B6C77B982C253C9B0082993E /* PowerSync in Frameworks */,
 				6A9669022B9EE69500B05DCF /* Supabase in Frameworks */,
@@ -229,15 +231,6 @@
 				B66658662C62315400159A81 /* Todos.swift */,
 			);
 			path = PowerSync;
-			sourceTree = "<group>";
-		};
-		AE7193DCE091DC4BD17BE54E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				23423475D5EF090FBC543BC3 /* Pods-PowerSyncExample.debug.xcconfig */,
-				14B25A4E5C92F258ADCF4F59 /* Pods-PowerSyncExample.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		B6F4210F2BC42F450005D0D0 /* natives */ = {
@@ -496,6 +489,7 @@
 				B66658762C63B7BB00159A81 /* IdentifiedCollections */,
 				B66658792C63B88700159A81 /* SwiftUINavigation */,
 				B666587B2C63B88700159A81 /* SwiftUINavigationCore */,
+				B69F7D852C8EE27400565448 /* AnyCodable */,
 			);
 			productName = PowerSyncExample;
 			productReference = 6A7315842B9854220004CB17 /* PowerSyncExample.app */;
@@ -531,6 +525,7 @@
 				B6C77B962C253C9B0082993E /* XCRemoteSwiftPackageReference "powersync-kotlin" */,
 				B66658752C63B7BB00159A81 /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
 				B66658782C63B88700159A81 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
+				B69F7D842C8EE27300565448 /* XCRemoteSwiftPackageReference "AnyCodable" */,
 			);
 			productRefGroup = 6A7315852B9854220004CB17 /* Products */;
 			projectDirPath = "";
@@ -871,12 +866,20 @@
 				minimumVersion = 1.5.4;
 			};
 		};
+		B69F7D842C8EE27300565448 /* XCRemoteSwiftPackageReference "AnyCodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flight-School/AnyCodable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
 		B6C77B962C253C9B0082993E /* XCRemoteSwiftPackageReference "powersync-kotlin" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin";
 			requirement = {
 				kind = exactVersion;
-				version = "0.0.1-ALPHA15.0";
+				version = "1.0.0-BETA1.0";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -911,6 +914,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B66658782C63B88700159A81 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
 			productName = SwiftUINavigationCore;
+		};
+		B69F7D852C8EE27400565448 /* AnyCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B69F7D842C8EE27300565448 /* XCRemoteSwiftPackageReference "AnyCodable" */;
+			productName = AnyCodable;
 		};
 		B6C77B972C253C9B0082993E /* PowerSync */ = {
 			isa = XCSwiftPackageProductDependency;

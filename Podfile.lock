@@ -1,16 +1,16 @@
 PODS:
-  - powersync-sqlite-core (0.1.6)
+  - powersync-sqlite-core (0.1.8)
 
 DEPENDENCIES:
-  - powersync-sqlite-core (~> 0.1.6)
+  - powersync-sqlite-core (~> 0.1.7)
 
 SPEC REPOS:
   trunk:
     - powersync-sqlite-core
 
 SPEC CHECKSUMS:
-  powersync-sqlite-core: 4c38c8f470f6dca61346789fd5436a6826d1e3dd
+  powersync-sqlite-core: 9325150c88515df0b5ea992007708588c3f01518
 
-PODFILE CHECKSUM: e4a7ca10ec7d888dc59523e97b78968bfff30f54
+PODFILE CHECKSUM: 8cf511c85a2b785572c3553be7e62c9ab52dfd96
 
 COCOAPODS: 1.15.2

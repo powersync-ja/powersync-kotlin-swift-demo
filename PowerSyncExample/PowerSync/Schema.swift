@@ -15,7 +15,7 @@ let lists = Table(
     indexes: [],
     localOnly: false,
     insertOnly: false,
-    _viewNameOverride: LISTS_TABLE
+    viewNameOverride: LISTS_TABLE
 )
 
 let todos = Table(
@@ -41,7 +41,7 @@ let todos = Table(
     ],
     localOnly: false,
     insertOnly: false,
-    _viewNameOverride: TODOS_TABLE
+    viewNameOverride: TODOS_TABLE
 )
 
 let AppSchema = Schema(tables: [lists, todos])
