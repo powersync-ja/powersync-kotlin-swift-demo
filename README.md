@@ -15,15 +15,7 @@ A step-by-step guide on Supabase<>PowerSync integration is available [here](http
 
 Open the project in XCode.
 
-Open the “_Secrets” file and fill in the placeholder values.
-
-You can find the Supabase values under "Project Settings" -> "API" in your Supabase dashboard — under the "URL" section, and anon key under "Project API keys".
-
-You can obtain your PowerSync Instance URL by following these steps:
-
-- In the project tree on the PowerSync dashboard, right click on the instance you created earlier
-- Click "Edit instance"
-- Click on "Instance URL" to copy the value
+Open the “_Secrets” file and fill in the placeholder values (more info can be found [here](https://docs.powersync.com/integration-guides/supabase)).
 
 ### Finish XCode configuration
 
@@ -43,4 +35,4 @@ rm -rf ~/Library/org.swift.swiftpm
 
 ## Run project
 
-Build the project, launch the app and sign in or register a new user.
+Build the project, launch the app and sign in with the test user you created in Supabase earlier.
