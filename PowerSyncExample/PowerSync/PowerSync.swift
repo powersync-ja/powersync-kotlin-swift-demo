@@ -38,11 +38,11 @@ class PowerSync {
     }
 
     func writeTransaction(_ queryHandle: @escaping () async throws -> Any) async throws -> Any? {
-        try await db.writeTransaction(body: SuspendTaskWrapper(queryHandle))
+        try await db.writeTransaction(callback: SuspendTaskWrapper(queryHandle))
     }
 
     func readTransaction(_ queryHandle: @escaping () async throws -> Any) async throws -> Any? {
-        try await db.readTransaction(body: SuspendTaskWrapper(queryHandle))
+        try await db.readTransaction(callback: SuspendTaskWrapper(queryHandle))
     }
 
     func watchLists(_ cb: @escaping (_ lists: [ListContent]) -> Void ) async {
@@ -70,7 +70,7 @@ class PowerSync {
     }
 
     func deleteList(id: String) async throws {
-        try await db.writeTransaction(body: SuspendTaskWrapper {
+        try await db.writeTransaction(callback: SuspendTaskWrapper {
             try await self.db.execute(
                 sql: "DELETE FROM \(LISTS_TABLE) WHERE id = ?",
                 parameters: [id]
@@ -128,7 +128,7 @@ class PowerSync {
     }
 
     func deleteTodo(id: String) async throws {
-        try await db.writeTransaction(body: SuspendTaskWrapper {
+        try await db.writeTransaction(callback: SuspendTaskWrapper {
             try await self.db.execute(
                 sql: "DELETE FROM \(TODOS_TABLE) WHERE id = ?",
                 parameters: [id]
