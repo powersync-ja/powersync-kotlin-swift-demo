@@ -7,7 +7,7 @@ A simple Swift app using the PowerSync Swift SDK. Built with KMMBridge + SKIE an
 - Using PowerSync Kotlin-Swift SDK to perform `read`, `insert`, `update`, and `watch` queries
 - Integrates with Supabase via `SupabaseConnector` and email-and-password `auth`
 
-## Set up Supabase project
+## Set up Supabase and PowerSync projects
 
 A step-by-step guide on Supabase<>PowerSync integration is available [here](https://docs.powersync.com/integration-guides/supabase).
 
