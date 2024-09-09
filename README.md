@@ -35,4 +35,4 @@ rm -rf ~/Library/org.swift.swiftpm
 
 ## Run project
 
-Build the project, launch the app and sign in with the test user you created in Supabase earlier.
+Build the project, launch the app and sign in or register a new user.
