@@ -121,8 +121,8 @@ class PowerSync {
             )
         } else {
             try await self.db.execute(
-                sql: "UPDATE \(TODOS_TABLE) SET description = ?, completed = ?, completed_at = NULL, completed_by = ? WHERE id = ?",
-                parameters: [todo.description, todo.isComplete, connector.currentUserID, todo.id]
+                sql: "UPDATE \(TODOS_TABLE) SET description = ?, completed = ?, completed_at = NULL, completed_by = NULL WHERE id = ?",
+                parameters: [todo.description, todo.isComplete, todo.id]
             )
         }
     }
