@@ -1,6 +1,6 @@
 # PowerSync Swift Demo App
 
-A Todo List app demonstrating the use of the PowerSync Swift SDK together with Supabase. 
+A Todo List app demonstrating the use of the PowerSync Swift SDK together with Supabase.
 
 The PowerSync Swift SDK is an extension of the [PowerSync Kotlin Multiplatform SDK](https://github.com/powersync-ja/powersync-kotlin), and uses the API tool [SKIE](https://skie.touchlab.co/) and KMMBridge to generate and publish a native Swift SDK. More details about this configuration can be found in our blog [here](https://www.powersync.com/blog/using-kotlin-multiplatform-with-kmmbridge-and-skie-to-publish-a-native-swift-sdk).
 
@@ -15,6 +15,7 @@ This SDK is currently in an alpha release and not suitable for production use, u
 To run this demo, you need Supabase and PowerSync projects. Detailed instructions for integrating PowerSync with Supabase can be found in [the integration guide](https://docs.powersync.com/integration-guides/supabase).
 
 Follow this guide to:
+
 1. Create and configure a Supabase project.
 2. Create a new PowerSync instance, connecting to the database of the Supabase project. See instructions [here](https://docs.powersync.com/integration-guides/supabase-+-powersync#connect-powersync-to-your-supabase).
 3. Deploy sync rules.
@@ -28,18 +29,18 @@ Open the “_Secrets” file and insert the credentials of your Supabase and Pow
 ### Finish XCode configuration
 
 1. Clear Swift caches
-```
+
+```bash
 rm -rf ~/Library/Caches/org.swift.swiftpm
 rm -rf ~/Library/org.swift.swiftpm
 ```
 
-2. Run `pod install` in the project root
+2. In Xcode:
 
-3. In Xcode:
 - Reset Packages: File -> Packages -> Reset Package Caches
 - Clean Build: Product -> Clean Build Folder.
 
-4. Enable CasePathMacros. We are using SwiftUI Navigation for the demo which requires this.
+3. Enable CasePathMacros. We are using SwiftUI Navigation for the demo which requires this.
 
 ## Run project
 
