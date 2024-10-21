@@ -18,7 +18,7 @@ class PowerSync {
     // openDb must be called before connect
     func connect() async {
         do {
-            try await db.connect(connector: connector,crudThrottleMs: 1000,retryDelayMs:5000)
+            try await db.connect(connector: connector, crudThrottleMs: 1000, retryDelayMs:5000, params: [:])
         } catch {
             print("Unexpected error: \(error.localizedDescription)") // Catches any other error
         }
