@@ -822,7 +822,7 @@
 			requirement = {
 				kind = versionRange;
 				maximumVersion = 0.4.0;
-				minimumVersion = 0.3.1;
+				minimumVersion = 0.3.6;
 			};
 		};
 		B69F7D842C8EE27300565448 /* XCRemoteSwiftPackageReference "AnyCodable" */ = {
