@@ -134,7 +134,6 @@
 				6A7315862B9854220004CB17 /* PowerSyncExample */,
 				6A7315852B9854220004CB17 /* Products */,
 				6A7315B52B9857AD0004CB17 /* Frameworks */,
-				AE7193DCE091DC4BD17BE54E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,13 +180,6 @@
 				B6F4213C2BC42F450005D0D0 /* classes */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AE7193DCE091DC4BD17BE54E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		B65C4D6B2C60D36700176007 /* Screens */ = {
@@ -838,7 +830,7 @@
 			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin";
 			requirement = {
 				kind = exactVersion;
-				version = "1.0.0-BETA5.0";
+				version = "1.0.0-BETA8.0";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
