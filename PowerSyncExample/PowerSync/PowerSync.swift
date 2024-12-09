@@ -1,5 +1,5 @@
 import Foundation
-import PowerSync
+import PowerSyncKotlin
 
 typealias SuspendHandle = () async throws -> Any?
 

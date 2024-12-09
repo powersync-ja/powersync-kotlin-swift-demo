@@ -1,5 +1,5 @@
 import Foundation
-import PowerSync
+import PowerSyncKotlin
 
 let LISTS_TABLE = "lists"
 let TODOS_TABLE = "todos"
