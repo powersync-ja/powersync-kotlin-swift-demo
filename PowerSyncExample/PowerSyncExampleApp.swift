@@ -1,5 +1,5 @@
 import SwiftUI
-import PowerSync
+import PowerSyncKotlin
 
 @main
 struct PowerSyncExampleApp: App {

@@ -7,14 +7,13 @@ struct HomeScreen: View {
     @Environment(AuthModel.self) private var authModel
     @Environment(NavigationModel.self) private var navigationModel
 
-    
       var body: some View {
 
         ListView()
           .toolbar {
             ToolbarItem(placement: .cancellationAction) {
               Button("Sign out") {
-                Task { @MainActor in
+                Task {
                     try await powerSync.signOut()
                     authModel.isAuthenticated = false
                     navigationModel.path = NavigationPath()

@@ -40,7 +40,7 @@
 		B67057A92CBFB24E000F3CBE /* PowerSyncSQLiteCore in Frameworks */ = {isa = PBXBuildFile; productRef = B67057A82CBFB24E000F3CBE /* PowerSyncSQLiteCore */; };
 		B69F7D862C8EE27400565448 /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = B69F7D852C8EE27400565448 /* AnyCodable */; };
 		B6B3698A2C64F4B30033C307 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B369892C64F4B30033C307 /* Navigation.swift */; };
-		B6C77B982C253C9B0082993E /* PowerSync in Frameworks */ = {isa = PBXBuildFile; productRef = B6C77B972C253C9B0082993E /* PowerSync */; };
+		B6E86F752D0760C000039418 /* PowerSyncKotlin in Frameworks */ = {isa = PBXBuildFile; productRef = B6E86F742D0760C000039418 /* PowerSyncKotlin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -117,8 +117,8 @@
 				B66658772C63B7BB00159A81 /* IdentifiedCollections in Frameworks */,
 				B69F7D862C8EE27400565448 /* AnyCodable in Frameworks */,
 				B666587C2C63B88700159A81 /* SwiftUINavigationCore in Frameworks */,
-				B6C77B982C253C9B0082993E /* PowerSync in Frameworks */,
 				6A9669022B9EE69500B05DCF /* Supabase in Frameworks */,
+				B6E86F752D0760C000039418 /* PowerSyncKotlin in Frameworks */,
 				6A9669002B9EE4FE00B05DCF /* PostgREST in Frameworks */,
 				6A9668FE2B9EE4FE00B05DCF /* Auth in Frameworks */,
 				B666587A2C63B88700159A81 /* SwiftUINavigation in Frameworks */,
@@ -469,12 +469,12 @@
 				6A9668FD2B9EE4FE00B05DCF /* Auth */,
 				6A9668FF2B9EE4FE00B05DCF /* PostgREST */,
 				6A9669012B9EE69500B05DCF /* Supabase */,
-				B6C77B972C253C9B0082993E /* PowerSync */,
 				B66658762C63B7BB00159A81 /* IdentifiedCollections */,
 				B66658792C63B88700159A81 /* SwiftUINavigation */,
 				B666587B2C63B88700159A81 /* SwiftUINavigationCore */,
 				B69F7D852C8EE27400565448 /* AnyCodable */,
 				B67057A82CBFB24E000F3CBE /* PowerSyncSQLiteCore */,
+				B6E86F742D0760C000039418 /* PowerSyncKotlin */,
 			);
 			productName = PowerSyncExample;
 			productReference = 6A7315842B9854220004CB17 /* PowerSyncExample.app */;
@@ -507,11 +507,11 @@
 			mainGroup = 6A73157B2B9854220004CB17;
 			packageReferences = (
 				6A9668FC2B9EE4FE00B05DCF /* XCRemoteSwiftPackageReference "supabase-swift" */,
-				B6C77B962C253C9B0082993E /* XCRemoteSwiftPackageReference "powersync-kotlin" */,
 				B66658752C63B7BB00159A81 /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
 				B66658782C63B88700159A81 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
 				B69F7D842C8EE27300565448 /* XCRemoteSwiftPackageReference "AnyCodable" */,
 				B67057A72CBFB24E000F3CBE /* XCRemoteSwiftPackageReference "powersync-sqlite-core-swift" */,
+				B6E86F732D0760C000039418 /* XCRemoteSwiftPackageReference "powersync-kotlin" */,
 			);
 			productRefGroup = 6A7315852B9854220004CB17 /* Products */;
 			projectDirPath = "";
@@ -825,12 +825,12 @@
 				minimumVersion = 0.6.7;
 			};
 		};
-		B6C77B962C253C9B0082993E /* XCRemoteSwiftPackageReference "powersync-kotlin" */ = {
+		B6E86F732D0760C000039418 /* XCRemoteSwiftPackageReference "powersync-kotlin" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/powersync-ja/powersync-kotlin";
 			requirement = {
 				kind = exactVersion;
-				version = "1.0.0-BETA8.0";
+				version = "1.0.0-BETA11.0";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -876,10 +876,10 @@
 			package = B69F7D842C8EE27300565448 /* XCRemoteSwiftPackageReference "AnyCodable" */;
 			productName = AnyCodable;
 		};
-		B6C77B972C253C9B0082993E /* PowerSync */ = {
+		B6E86F742D0760C000039418 /* PowerSyncKotlin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B6C77B962C253C9B0082993E /* XCRemoteSwiftPackageReference "powersync-kotlin" */;
-			productName = PowerSync;
+			package = B6E86F732D0760C000039418 /* XCRemoteSwiftPackageReference "powersync-kotlin" */;
+			productName = PowerSyncKotlin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
