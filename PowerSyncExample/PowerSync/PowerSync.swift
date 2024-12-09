@@ -4,7 +4,6 @@ import PowerSyncKotlin
 typealias SuspendHandle = () async throws -> Any?
 
 @Observable
-@MainActor
 class PowerSync {
     let factory = DatabaseDriverFactory()
     let connector = SupabaseConnector()
@@ -63,19 +62,19 @@ class PowerSync {
     }
 
     func insertList(_ list: NewListContent) async throws {
-        try await self.db.execute(
+        _ = try await self.db.execute(
             sql: "INSERT INTO \(LISTS_TABLE) (id, created_at, name, owner_id) VALUES (uuid(), datetime(), ?, ?)",
             parameters: [list.name, connector.currentUserID]
         )
     }
 
     func deleteList(id: String) async throws {
-        try await db.writeTransaction(callback: SuspendTaskWrapper {
-            try await self.db.execute(
+        _ = try await db.writeTransaction(callback: SuspendTaskWrapper {
+            _ = try await self.db.execute(
                 sql: "DELETE FROM \(LISTS_TABLE) WHERE id = ?",
                 parameters: [id]
             )
-            try await self.db.execute(
+            _ = try await self.db.execute(
                 sql: "DELETE FROM \(TODOS_TABLE) WHERE list_id = ?",
                 parameters: [id]
             )
@@ -106,7 +105,7 @@ class PowerSync {
     }
 
     func insertTodo(_ todo: NewTodo, _ listId: String) async throws {
-        try await self.db.execute(
+        _ = try await self.db.execute(
             sql: "INSERT INTO \(TODOS_TABLE) (id, created_at, created_by, description, list_id, completed) VALUES (uuid(), datetime(), ?, ?, ?, ?)",
             parameters: [connector.currentUserID, todo.description, listId, todo.isComplete]
         )
@@ -115,12 +114,12 @@ class PowerSync {
     func updateTodo(_ todo: Todo) async throws {
         // Do this to avoid needing to handle date time from Swift to Kotlin
         if(todo.isComplete) {
-            try await self.db.execute(
+             _ = try await self.db.execute(
                 sql: "UPDATE \(TODOS_TABLE) SET description = ?, completed = ?, completed_at = datetime(), completed_by = ? WHERE id = ?",
                 parameters: [todo.description, todo.isComplete, connector.currentUserID, todo.id]
             )
         } else {
-            try await self.db.execute(
+            _ = try await self.db.execute(
                 sql: "UPDATE \(TODOS_TABLE) SET description = ?, completed = ?, completed_at = NULL, completed_by = NULL WHERE id = ?",
                 parameters: [todo.description, todo.isComplete, todo.id]
             )
@@ -128,8 +127,8 @@ class PowerSync {
     }
 
     func deleteTodo(id: String) async throws {
-        try await db.writeTransaction(callback: SuspendTaskWrapper {
-            try await self.db.execute(
+        _ = try await db.writeTransaction(callback: SuspendTaskWrapper {
+            _ = try await self.db.execute(
                 sql: "DELETE FROM \(TODOS_TABLE) WHERE id = ?",
                 parameters: [id]
             )
@@ -145,8 +144,7 @@ class SuspendTaskWrapper: KotlinSuspendFunction1 {
         self.handle = handle
     }
 
-    @MainActor
-    func invoke(p1: Any?, completionHandler: @escaping (Any?, Error?) -> Void) {
+    func __invoke(p1: Any?, completionHandler: @escaping (Any?, Error?) -> Void) {
         Task {
             do {
                 let result = try await self.handle()
