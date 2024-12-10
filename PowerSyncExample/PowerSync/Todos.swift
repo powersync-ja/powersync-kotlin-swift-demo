@@ -1,5 +1,5 @@
 import Foundation
-import PowerSync
+import PowerSyncKotlin
 
 struct Todo: Identifiable, Hashable, Decodable {
     let id: String

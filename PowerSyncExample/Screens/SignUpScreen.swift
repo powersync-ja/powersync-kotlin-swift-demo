@@ -33,7 +33,7 @@ struct SignUpScreen: View {
 
             Section {
                 Button("Sign up") {
-                    Task { @MainActor in
+                    Task {
                         await signUpButtonTapped()
                     }
                 }

@@ -1,11 +1,10 @@
 import Auth
 import SwiftUI
 import Supabase
-import PowerSync
+import PowerSyncKotlin
 import AnyCodable
 
 @Observable
-@MainActor
 class SupabaseConnector: PowerSyncBackendConnector {
     let powerSyncEndpoint: String = Secrets.powerSyncEndpoint
     let client: SupabaseClient = SupabaseClient(supabaseURL: Secrets.supabaseURL, supabaseKey: Secrets.supabaseAnonKey)
@@ -21,7 +20,7 @@ class SupabaseConnector: PowerSyncBackendConnector {
             guard let self = self else { return }
 
             for await (event, session) in self.client.auth.authStateChanges {
-                guard [.initialSession, .signedIn, .signedOut].contains(event) else { throw AuthError.sessionNotFound }
+                guard [.initialSession, .signedIn, .signedOut].contains(event) else { throw AuthError.sessionMissing }
 
                 self.session = session
             }
@@ -36,11 +35,11 @@ class SupabaseConnector: PowerSyncBackendConnector {
         return id.uuidString.lowercased()
     }
 
-    override func fetchCredentials() async throws -> PowerSyncCredentials? {
+    override func __fetchCredentials() async throws -> PowerSyncCredentials? {
         session = try await client.auth.session
 
         if (self.session == nil) {
-            throw AuthError.sessionNotFound
+            throw AuthError.sessionMissing
         }
 
         let token = session!.accessToken
@@ -49,7 +48,7 @@ class SupabaseConnector: PowerSyncBackendConnector {
         return PowerSyncCredentials(endpoint: self.powerSyncEndpoint, token: token, userId: currentUserID)
     }
 
-    override func uploadData(database: any PowerSyncDatabase) async throws {
+    override func __uploadData(database: any PowerSyncDatabase) async throws {
 
         guard let transaction = try await database.getNextCrudTransaction() else { return }
 
@@ -75,7 +74,7 @@ class SupabaseConnector: PowerSyncBackendConnector {
                 }
             }
 
-            try await transaction.complete.invoke(p1: nil)
+            _ = try await transaction.complete.invoke(p1: nil)
 
         } catch {
             print("Data upload error - retrying last entry: \(lastEntry!), \(error)")
