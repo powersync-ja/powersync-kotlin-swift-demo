@@ -1,4 +1,8 @@
-# PowerSync Swift Demo App
+# ARCHIVED: PowerSync Swift Demo App
+
+This demo app is archived and no longer maintained. Please use the updated Swift Demo app available [here](https://github.com/powersync-ja/powersync-swift/tree/main/Demo).
+
+---
 
 A Todo List app demonstrating the use of the PowerSync Swift SDK together with Supabase.
 
